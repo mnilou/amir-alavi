@@ -1,0 +1,4080 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+"http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+xmlns:og="http://ogp.me/ns#"
+xmlns:article="http://ogp.me/ns/article#"
+xmlns:book="http://ogp.me/ns/book#"
+xmlns:profile="http://ogp.me/ns/profile#"
+xmlns:video="http://ogp.me/ns/video#"
+xmlns:product="http://ogp.me/ns/product#"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/terms/"
+xmlns:foaf="http://xmlns.com/foaf/0.1/"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:sioc="http://rdfs.org/sioc/ns#"
+xmlns:sioct="http://rdfs.org/sioc/types#"
+xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-1888dd77a01fc8c6df6",applicationID:"277409019"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+<link rel="shortcut icon" href="https://www.brunomars.com/sites/g/files/g2000006216/themes/mythemes/acq_starterm_copy_2/images/favicon_6.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- <meta name="description" content="Celebrating 10th years of the debut album, Doo-Wops &amp; Hooligans." /> -->
+<meta name="robots" content="follow, index" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://www.brunomars.com/doowops10" />
+<meta property="og:site_name" content="Bruno Mars Official Website" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.brunomars.com/doowops10" />
+<meta property="og:title" content="Bruno Mars - 10th Anniversary - Doo-Wops &amp; Hooligans" />
+<meta property="og:description" content="Celebrating 10th years of the debut album, Doo-Wops &amp; Hooligans." />
+<meta property="og:image" content="https://www.brunomars.com//sites/g/files/g2000006216/f/202009/og.jpg" />
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-document-language="true" data-domain-script="c9de361b-0713-4a44-b884-066730f99f40"></script>
+<script type="text/javascript">function OptanonWrapper() {
+var cookiePolicyLink = 'https://www.wminewmedia.com/cookies-policy/';
+var allLinks = document.querySelectorAll('a');
+for(i = 0; i < allLinks.length; i++) {
+let href = allLinks[i].href;
+if (href.indexOf(cookiePolicyLink) > -1 && href.indexOf('?ot=') < 0) {
+href = href + '?ot=c9de361b-0713-4a44-b884-066730f99f40&url=' + window.location.hostname;
+allLinks[i].setAttribute("href", href);
+allLinks[i].setAttribute("target", "_blank");
+}
+} 
+var eOT = new Event("OneTrustGroupsUpdated");
+document.dispatchEvent(eOT);
+}</script>
+<link rel="stylesheet" type="text/css" href="https://www.wminewmedia.com/cookies-policy/onetrust/ot.css">
+<script>  digitalData = {"settings":{"reportSuites":"wmgbrunomars.com,wmgatl,wmg"},"content":{"artist":"Bruno Mars","label":"Atlantic Records","sublabel":""},"page":{"pageInfo":{"pageName":"Bruno Mars - 10th Anniversary - Doo-Wops &amp; Hooligans","platform":"Drupal 7","devTeam":"WMAS"},"category":{"primaryCategory":"Bruno Mars","pageType":"Splash Page/Lightbox"}}}</script><script>var aliasArgs = "";
+
+/* Switch omniture string for fan club pages */
+var fanclubFlag = false;
+var reportSuitesStr = "wmgbrunomars.com,wmgatl,wmg";
+/*if (location.href.indexOf("/group/shinedown-nation") > 0) {
+  fanclubFlag = true;
+  reportSuitesStr = "wmgbrunomars.com,wmgatl,wmg";
+}*/
+/*** End ***/
+
+digitalData = {
+  settings: {
+      reportSuites: reportSuitesStr
+  },
+  content: {
+      artist: "Amir Alavi",
+      label: "",
+      sublabel: ""
+  },
+  page: {
+      pageInfo: {
+          pageName: "",
+          server: "",
+          platform: "Drupal 7",
+          devTeam:"WMAS"
+      },
+      category: {
+          primaryCategory: "",
+          pageType: ""
+      }
+  }
+}
+
+digitalData.page.pageInfo.server = digitalData.content.artist + ":Site";
+
+if (aliasArgs.length == 0) {
+  var string = "Amir Alavi";
+  var pageMapping = {
+      "news": "News",
+      "photo": "Photos",
+      "music": "Music & Videos",
+      "shows": "Tour",
+      "about": "About",
+      "community": "Community",
+      "group": "Fan Club",
+      "mailing-list": "Mailing List Sign-up",
+      "home-onepage-b": "HomePage",
+      "not-authorized": "403 Error",
+      "page-not-found": "404 Error",
+      "user": "Login"
+     }
+  var pageNameMapping = {
+      "news": "News:Landing",
+      "photo": "Photos:Landing",
+      "music": "Music and Videos:Landing",
+      "shows": "Tour:Upcoming",
+      "about": "About",
+      "community": "Community:Landing",
+      "group": "Fan Club:Landing",
+      "mailing-list": "Mailing List Sign-up",
+      "home-onepage-b": "HomePage",
+      "not-authorized": "Error",
+      "page-not-found": "Error",
+      "user": "Login"     
+  }
+
+  digitalData.page.pageInfo.pageName = digitalData.content.artist + ":" + pageMapping[string];
+  digitalData.page.category.pageType = pageNameMapping[string];
+
+  switch (string) {
+      case "page-not-found":
+          digitalData.page.category.primaryCategory = "Amir Alavi:Error";
+          break;
+      case "not-authorized":
+          digitalData.page.category.primaryCategory = "Amir Alavi:Error";
+          break;
+      case "home-onepage-b":
+          digitalData.page.category.primaryCategory = "Amir Alavi:Home";
+          break;
+      case "user":
+          digitalData.page.category.pageType = "";
+          digitalData.page.category.primaryCategory = digitalData.content.artist + ":" + pageMapping[string];
+          break;
+  }
+} else {
+  if (aliasArgs == "category") {
+      var categoryMapping = {
+          "news-v1": "News",
+          "photo-v1": "Photos",
+          "forum": "Discussions"
+      }
+      var categoryNameMapping = {
+          "news-v1": "News:Category",
+          "photo-v1": "Photos:Category",
+          "forum": "Community:Discussions"
+      }
+      var string = "node";
+
+      digitalData.page.pageInfo.pageName = digitalData.content.artist + ":" + categoryMapping[string] + ":";
+      digitalData.page.category.primaryCategory = digitalData.content.artist + ":" + categoryMapping[string];
+      digitalData.page.category.pageType = categoryNameMapping[string];
+
+  } else {
+      var string = "Splash Page/Lightbox";
+      var currentPageArgs = "Amir Alavi";
+      var detailPageMapping = {
+          "Photo": "Photos",
+          "Forum topic": "Discussions",
+          "Album": "Music",
+          "forum": "Community",
+          "blog": "News",
+          "Blog": "News",
+          "news": "News"
+      }
+      var detailPageNameMapping = {
+          "Photo": "Photos:Detail",
+          "Forum topic": "Community:Thread",
+          "Album": "Music:Album Details",
+          "forum": "Community:Landing",
+          "blog": "News:Detail",
+          "Blog": "News:Detail",
+          "news": "News:Detail"
+      }
+
+      if (string == "blog" || string == "Blog" || string == "news" || string == "News") {
+          document.addEventListener("DOMContentLoaded", function (event) {
+              // document.querySelectorAll(".node #comment-new .form-submit")[0].setAttribute("data-track", "blog-comment");  
+          });
+      }
+
+      digitalData.page.pageInfo.pageName = digitalData.content.artist + ":" + detailPageMapping[string] + ":Amir Alavi";
+      digitalData.page.category.primaryCategory = digitalData.content.artist + ":" + detailPageMapping[string];
+      digitalData.page.category.pageType = detailPageNameMapping[string];
+      if (aliasArgs == "login") {
+          digitalData.page.pageInfo.pageName = "Amir Alavi:Login";
+          digitalData.page.category.primaryCategory = "Amir Alavi:Login";
+          digitalData.page.category.pageType = "";
+      }
+
+
+      if (currentPageArgs.length !== 0 && currentPageArgs.indexOf("member") !== -1) {
+          digitalData.page.pageInfo.pageName = "Amir Alavi:Profile";
+          digitalData.page.category.primaryCategory = "Amir Alavi:Profile";
+          digitalData.page.category.pageType = "community:profile";
+      }
+  }
+}</script><script src='https://assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js'></script>  <title>Amir Alavi</title>
+<link type="text/css" rel="stylesheet" href="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8bXVzaWN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" media="all" />
+<link type="text/css" rel="stylesheet" href="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG11c2ljfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" media="all" />
+<link type="text/css" rel="stylesheet" href="" media="screen" />
+<link type="text/css" rel="stylesheet" href="https://www.brunomars.com/sites/g/files/g2000006216/f/css/css_VPEF8eugMbGTVSqA0GG07uJ3_V-WYDqt-2kpehyfC2k.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.brunomars.com/sites/g/files/g2000006216/f/css/css_P--uK_u2cWk7Ux9rtPoaQn5tpHG8G7uVzfcocLAKXes.css" media="only screen and (max-device-width: 480px)" />
+<link type="text/css" rel="stylesheet" href="https://www.brunomars.com/sites/g/files/g2000006216/f/css/css_A4veNBo1iC9I7Wp74eTzemy-XwvDkqFp-JguZWKtiEY.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.brunomars.com/sites/g/files/g2000006216/f/css/css_-7zOoFAD82Y3Ji67e7Jswjtlb0_zslYWKpycsSPoJ60.css" media="all" />
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="" media="all" />
+<![endif]-->
+<script type="text/javascript" src="https://www.brunomars.com/sites/g/files/g2000006216/f/js/js_Zjy-0nf6F3LqnbeqtqgfxYPs-f1yUSmCcdAWMHea3lc.js"></script>
+<script type="text/javascript" src="https://www.brunomars.com/sites/g/files/g2000006216/f/js/js_uf70xlUxhvInSLPpsDRV1njqa6bUCvpxD0Sm5TqM1pc.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+document.createElement( "picture" );
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.brunomars.com/sites/g/files/g2000006216/f/js/js_wqbkEdTADCQvU009W2K2R-vvLiKLz2dYgrXTmd-HfQQ.js"></script>
+<script type="text/javascript" src="https://www.brunomars.com/sites/g/files/g2000006216/f/js/js_SVSEULPpa1zAvduAMyldDemu4qWJNGVNt7J8-Chf9lw.js"></script>
+<script type="text/javascript" src="https://use.typekit.com/rva5uhv.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+try{Typekit.load();}catch(e){};
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.brunomars.com/sites/g/files/g2000006216/f/js/js_Wkqtiue4cg-LsVI7YbwbgZbmUZ-DvgT_gtJKbMQOTNQ.js"></script>
+<script type="text/javascript" src="https://www.brunomars.com/sites/g/files/g2000006216/f/js/js_mb1YDRuPsTkd92_J0Ji9rf8uRzhTD_qeYxfqxniImlQ.js"></script>
+<script type="text/javascript" src="https://libraries.wmgartistservices.com/custom-js/SplashLightbox.js"></script>
+<script type="text/javascript" src="https://www.brunomars.com/sites/g/files/g2000006216/f/js/js_6nF3FQSUP8loKvu0_iv6TLBmeHqdMoFomkXeqtHlR18.js"></script>
+<script type="text/javascript" src="https://cdn.livefyre.com/Livefyre.js"></script>
+<script type="text/javascript" src="https://www.brunomars.com/sites/g/files/g2000006216/f/js/js_YVsolUyfqK9aN-GE8DhRPg10O9xljtGRXAxrReoEN9w.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"acq_starterm_copy_2","theme_token":"sr5nNnT5XayM2O8pN7yFD0vRLk7Nzh_GUB76qVdLavc","js":{"sites\/all\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/contrib\/picture\/picture.min.js":1,"public:\/\/javascript_libraries\/js_9vjzE2QrwPVuDl3iTW4j7HV8jWDgpMUagNDgN6A-BHI.js":1,"public:\/\/javascript_libraries\/js_GsMeKWiIs92-pW-8nvdwENjjgp4-MccJpl0h3WcpnZo.js":1,"public:\/\/javascript_libraries\/js_oItRTKE8JmupQV621b6oj2on2Dzpb9EAk3kHMMpi6YU.js":1,"public:\/\/javascript_libraries\/sc-player-new.txt":1,"public:\/\/javascript_libraries\/highlight password fields on Edit Account page_0.txt":1,"public:\/\/javascript_libraries\/js_Mx5dHrV7hniYXjyrpcbWxxhFZ3iLxNPuAfxo3M-G94U.js":1,"https:\/\/libraries.wmgartistservices.com\/custom-js\/Mailing-List-V3.js":1,"https:\/\/libraries.wmgartistservices.com\/custom-js\/Twitter-Button-Script.js":1,"https:\/\/libraries.wmgartistservices.com\/custom-js\/Silverpop-Integration.js":1,"public:\/\/javascript_libraries\/js__CBRdbp0uvl6xMBgZn0lttLRAYb2juAxMtVeVu9Ua0M.js":1,"public:\/\/javascript_libraries\/js_cfR6jWbucImFInJRntGiOZlU4wSJp2rWc3oz8mXzzOQ.js":1,"https:\/\/apis.google.com\/js\/platform.js":1,"public:\/\/javascript_libraries\/ig-videos.js_0.txt":1,"public:\/\/javascript_libraries\/jquery.linky_.js_0.txt":1,"public:\/\/javascript_libraries\/infinite-Scroll.js.txt":1,"public:\/\/javascript_libraries\/turnkey-lb-toaster-DTM.js.txt":1,"https:\/\/d2ccommon.wmg-gardens.com\/sites\/g\/files\/g2000007471\/f\/assets\/DTM_Custom.js.txt":1,"profiles\/warner\/modules\/acquia\/gardens_misc\/js\/gardens_misc.iframe-undo.js":1,"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"profiles\/warner\/modules\/contrib\/dialog\/jquery.xLazyLoader.js":1,"misc\/ui\/jquery.ui.core.min.js":1,"misc\/ui\/jquery.ui.widget.min.js":1,"misc\/ajax.js":1,"misc\/jquery.ba-bbq.js":1,"modules\/overlay\/overlay-parent.js":1,"misc\/jquery.cookie.js":1,"profiles\/warner\/modules\/gardens\/gardens_features\/plugins\/jquery.form.js":1,"misc\/ui\/jquery.ui.mouse.min.js":1,"misc\/ui\/jquery.ui.resizable.min.js":1,"misc\/ui\/jquery.ui.draggable.min.js":1,"misc\/ui\/jquery.ui.button.min.js":1,"misc\/ui\/jquery.ui.position.min.js":1,"misc\/ui\/jquery.ui.dialog.min.js":1,"profiles\/warner\/modules\/contrib\/views\/js\/jquery.ui.dialog.patch.js":1,"profiles\/warner\/modules\/gardens\/gardens_features\/plugins\/Modernizr\/modernizr.js":1,"profiles\/warner\/libraries\/breakup\/jquery.breakup.min.js":1,"profiles\/warner\/modules\/contrib\/dialog\/dialog.js":1,"0":1,"profiles\/warner\/modules\/contrib\/comment_notify\/comment_notify.js":1,"profiles\/warner\/modules\/gardens\/gardens_features\/js\/gardens_features.ui-dialog.js":1,"profiles\/warner\/libraries\/colorbox\/jquery.colorbox-min.js":1,"profiles\/warner\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"profiles\/warner\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"profiles\/warner\/modules\/contrib\/colorbox\/js\/colorbox_inline.js":1,"https:\/\/use.typekit.com\/rva5uhv.js":1,"1":1,"profiles\/warner\/libraries\/timeago\/jquery.timeago.js":1,"profiles\/warner\/modules\/contrib\/timeago\/timeago.js":1,"profiles\/warner\/modules\/contrib\/extlink\/extlink.js":1,"profiles\/warner\/modules\/acquia\/gardens_misc\/js\/gardens_misc.colorbox.js":1,"profiles\/warner\/modules\/contrib\/acsf\/acsf_openid\/acsf_openid.overlay.js":1,"profiles\/warner\/modules\/acquia\/gardens_help\/gardens_help.js":1,"profiles\/warner\/modules\/gardens\/gardens_features\/js\/gardens_features.js":1,"profiles\/warner\/modules\/acquia\/gardens_media\/gardens_media_links.js":1,"sites\/g\/files\/g2000006216\/themes\/mythemes\/acq_starterm_copy_2\/local.js":1,"sites\/all\/modules\/custom\/warner_misc\/plugins\/prevent-multiple-clicks\/prevent-multiple-clicks.js":1,"public:\/\/javascript_libraries\/js_tWssgbB6RD-K4eT5VYSk7bvAnOmqM8gx40IiaXJ6cxQ.js":1,"public:\/\/javascript_libraries\/js_esLq-yzyrm5wNkQZa7F4XwncvFq9qRfhVTgOX6rWZQI.js":1,"public:\/\/javascript_libraries\/js_DnOMO-FtEJyikTQtbqKB61uKetSKYFyELuqVjXcFv4A.js":1,"public:\/\/javascript_libraries\/js_Vq3vhExnniV-MsZd8SZX_O9gk3inRbbH5y4wPps_o9w.js":1,"public:\/\/javascript_libraries\/js_I_kCiPqzkTj9XhcJZKWTVe6UHbYfbA9DjV_4SRu8Io4.js":1,"public:\/\/javascript_libraries\/js_UYmJCsFjV0E5eMI64C4l_2v_0pH7Juwc3SuoRU7rTBY.js":1,"public:\/\/javascript_libraries\/js_xE-6xG8tavkHMDA_ANUslt4Btgp7tQmFHyG4NgTszBY.js":1,"public:\/\/javascript_libraries\/js_-xTJKEQvkoHuDHDIbhLEfj_5cL7ZYxzo6x_GNGJotP0.js":1,"public:\/\/javascript_libraries\/js_3BljJBvoCas2fWmzp9nNTenliZbKWwbW-3Z4xzPF9ak.js":1,"public:\/\/javascript_libraries\/js_7OrAwXinK4smINy8OIam50y4nvN9-LKbOCfHjOsroA4.js":1,"public:\/\/javascript_libraries\/js_79gT8ocG-gX1mio5ox4ANdkanF5sFzD7Vf8isS3Ejbs.js":1,"public:\/\/javascript_libraries\/js_Fj9cCAv1wJ-BlPu-rwgD81Tw4IQ5lgdid7AqjV50ZGc.js":1,"public:\/\/javascript_libraries\/js_wK_QYcoCbm238b6-Raeaf9j6IalcikdpqgMTgX1iQUo.js":1,"public:\/\/javascript_libraries\/pkgd.imageload.min_.js.txt":1,"https:\/\/libraries.wmgartistservices.com\/custom-js\/SplashLightbox.js":1,"public:\/\/javascript_libraries\/utils.js_0.txt":1,"public:\/\/javascript_libraries\/onepage-config.js_0.txt":1,"public:\/\/javascript_libraries\/layout.js_0.txt":1,"public:\/\/javascript_libraries\/onepage-blocks.js.txt":1,"public:\/\/javascript_libraries\/music.js_0.txt":1,"public:\/\/javascript_libraries\/pages.js.txt":1,"public:\/\/javascript_libraries\/onepage-misc.js_1.txt":1,"public:\/\/javascript_libraries\/js_EgwXkTRNClSj0kBmhtnibADXt57_U2M4h0l76OTYnoQ.js":1,"public:\/\/javascript_libraries\/init_v1.js_0.txt":1,"public:\/\/javascript_libraries\/js_lAD9C2v7q3DLjjQOW_NQvdQotOrpJY5Z8MTqSr-3d38.js":1,"public:\/\/javascript_libraries\/js_9twpOWMQTZbXJwezhqQb7Z0WI-vH2E9dfm1SwleSGR4.js":1,"https:\/\/cdn.livefyre.com\/Livefyre.js":1,"public:\/\/javascript_libraries\/js_t5DqCHWZ3vjWkKhxqbwoRUb8g7qOmcxb2gCrgx0YtUw.js":1,"public:\/\/javascript_libraries\/supplant.js.txt":1,"public:\/\/javascript_libraries\/TweenMax.min_.js.txt":1,"public:\/\/javascript_libraries\/ScrollMagic.min_.js.txt":1,"public:\/\/javascript_libraries\/animation.gsap_.js.txt":1,"public:\/\/javascript_libraries\/consolidated-script-brunomars_6nov_fix.js_0.txt":1,"public:\/\/javascript_libraries\/jquery-1.11.3.min_.js.txt":1,"public:\/\/javascript_libraries\/owl.carousel.min_v2.js.txt":1,"public:\/\/javascript_libraries\/spotify-web-api.js_0.txt":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"modules\/overlay\/overlay-parent.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"profiles\/warner\/modules\/gardens\/gardens_features\/css\/gardens_features.jquery.ui.dialog.css":1,"profiles\/warner\/libraries\/colorbox\/example1\/colorbox.css":1,"profiles\/warner\/modules\/contrib\/comment_notify\/comment_notify.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/comment\/comment.css":1,"profiles\/warner\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/warner\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"profiles\/warner\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css":1,"profiles\/warner\/modules\/contrib\/role_indicators\/role_indicators.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"profiles\/warner\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/custom\/warner_misc\/css\/wmg.ui.dialog.css":1,"profiles\/warner\/modules\/acquia\/gardens_misc\/css\/gardens_misc.mast.css":1,"profiles\/warner\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/warner\/modules\/contrib\/follow\/follow.css":1,"profiles\/warner\/modules\/acquia\/gardens_help\/gardens_help.css":1,"sites\/all\/modules\/custom\/warner_honeypot\/warner_honeypot.css":1,"profiles\/warner\/modules\/contrib\/extlink\/extlink.css":1,"profiles\/warner\/modules\/contrib\/taxonomy_access\/taxonomy_access.css":1,"profiles\/warner\/modules\/gardens\/gardens_features\/gardens_features.css":1,"profiles\/warner\/modules\/gardens\/gardens_features\/gardens_features.jquery.ui.theme.css":1,"sites\/g\/files\/g2000006216\/themes\/mythemes\/acq_starterm_copy_2\/defaults.css":1,"sites\/g\/files\/g2000006216\/themes\/mythemes\/acq_starterm_copy_2\/style.css":1,"sites\/g\/files\/g2000006216\/themes\/mythemes\/acq_starterm_copy_2\/palette.css":1,"sites\/g\/files\/g2000006216\/themes\/mythemes\/acq_starterm_copy_2\/custom.css":1,"sites\/g\/files\/g2000006216\/themes\/mythemes\/acq_starterm_copy_2\/advanced.css":1,"sites\/g\/files\/g2000006216\/themes\/mythemes\/acq_starterm_copy_2\/font-families.css":1,"profiles\/warner\/modules\/gardens\/gardens_features\/css\/ie\/gardens_features.lte-ie-8.css":1}},"overlay":{"paths":{"admin":"user\/*\/edit-profile\nimport\nimport\/*\nnode\/*\/import\nnode\/*\/delete-items\nnode\/*\/log\nfield-collection\/*\/*\/edit\nfield-collection\/*\/*\/delete\nfield-collection\/*\/add\/*\/*\nfocal_point\/test-drive\nfocal_point\/preview\/*\/*\ngardener\/*\ngardens-login\nmedia\/*\/edit\nmedia\/*\/multiedit\nmedia\/*\/delete\nmedia-gallery\/detail\/*\/*\/edit\nmedia-gallery\/detail\/*\/*\/remove\nnode\/*\/multiedit\nnode\/*\/edit\nnode\/*\/delete\nnode\/*\/revisions\nnode\/*\/revisions\/*\/revert\nnode\/*\/revisions\/*\/delete\nnode\/add\nnode\/add\/*\nuser\/*\/openid\nuser\/*\/openid\/delete\noverlay\/dismiss-message\nuser\/*\/password\nuser\/*\/shortcuts\nuser\/*\/spambot\nadmin\nadmin\/*\nbatch\ntaxonomy\/term\/*\/edit\nuser\/*\/cancel\nuser\/*\/edit\nuser\/*\/edit\/*","non_admin":"admin\/structure\/block\/demo\/*\nadmin\/structure\/mailing-list\/*\/export\nadmin\/reports\/status\/php"},"pathPrefixes":[],"ajaxCallback":"overlay-ajax"},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"gardenerHelpSearchURL":"http:\/\/www.drupalgardens.com","gardensMisc":{"isSMB":false},"themebuilderLogPath":"themebuilder-log-message","timeago":{"refreshMillis":60000,"allowFuture":true,"localeTitle":false,"cutoff":0,"strings":{"prefixAgo":null,"prefixFromNow":null,"suffixAgo":"ago","suffixFromNow":"from now","seconds":"less than a minute","minute":"about a minute","minutes":"%d minutes","hour":"about an hour","hours":"about %d hours","day":"a day","days":"%d days","month":"about a month","months":"%d months","year":"about a year","years":"%d years","wordSeparator":" "}},"extlink":{"extTarget":0,"extClass":0,"extSubdomains":0,"extExclude":"(acquia-sites.com|drupalgardens.com|rpxnow.com)","extInclude":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0},"server_variables":{"site_name":"Bruno Mars","action":"view","entity_id":"28661","entity_type":"node","entity_subtype":"splash_page_lightbox","entity_title":"Bruno Mars - 10th Anniversary - Doo-Wops \u0026 Hooligans","entity_create_date":"1601269686","entity_update_date":"1601894998","page_title":"Bruno Mars - 10th Anniversary - Doo-Wops \u0026 Hooligans"},"gardensFeatures":{"userIsAnonymous":true,"dialogUserEnabled":true,"isSMB":false,"siteFactoryProductPage":"https:\/\/www.acquia.com\/products-services\/acquia-cloud-site-factory"}});
+//--><!]]>
+</script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-28661 node-type-splash-page-lightbox theme-markup-2 body-layout-fixed-c" >
+<div id="skip-to-content">
+  <a href="#skip-to-content-target">Skip directly to content</a>
+</div>
+
+<!--[if IE ]>
+<div id="gardens_ie">
+<![endif]-->
+
+<!--[if IE 8]>
+<div id="gardens_ie8">
+<![endif]-->
+
+<!--[if IE 7]>
+<div id="gardens_ie7">
+<![endif]-->
+
+<!--[if lt IE 7]>
+<div id="gardens_ie-deprecated">
+<![endif]-->
+
+  
+<div id="page" class="page clearfix tb-terminal">
+
+<div id="page-deco-top" class="deco-page-top deco-page deco-top deco tb-scope tb-scope-prefer">
+  <div class="width deco-width inner tb-terminal">
+    <div class="layer-a layer"></div>
+    <div class="layer-b layer"></div>
+    <div class="layer-c layer"></div>
+    <div class="layer-d layer"></div>
+  </div>
+</div>
+
+<div id="page-deco-bottom" class="deco-page-bottom deco-page deco-bottom deco tb-scope tb-scope-prefer">
+  <div class="width deco-width inner tb-terminal">
+    <div class="layer-a layer"></div>
+    <div class="layer-b layer"></div>
+    <div class="layer-c layer"></div>
+    <div class="layer-d layer"></div>
+  </div>
+</div>
+  
+<div class="page-width tb-scope">
+  <div class="lining tb-terminal"> <!-- Broken out of .page-width to avoid update issues with margin: 0 auto being undone -->
+  
+    <div id="header" class="wrapper-header wrapper clearfix tb-scope">
+    
+      <div id="header-deco-top" class="deco-header-top deco-header deco-top deco tb-scope tb-scope-prefer">
+        <div class="width deco-width inner tb-terminal">
+          <div class="layer-a layer"></div>
+          <div class="layer-b layer"></div>
+          <div class="layer-c layer"></div>
+          <div class="layer-d layer"></div>
+        </div>
+      </div>
+      
+      <div id="header-deco-bottom" class="deco-header-bottom deco-header deco-bottom deco tb-scope tb-scope-prefer">
+        <div class="width deco-width inner tb-terminal">
+          <div class="layer-a layer"></div>
+          <div class="layer-b layer"></div>
+          <div class="layer-c layer"></div>
+          <div class="layer-d layer"></div>
+        </div>
+      </div>
+    
+                <div id="preheader" class="stack-preheader stack-pre stack col-align-last-right horizontal clearfix tb-scope">
+          <div class="stack-width inset-1 inset tb-terminal">
+            <div class="inset-2 inset tb-terminal">
+              <div class="inset-3 inset tb-terminal">
+                <div class="inset-4 inset tb-terminal">
+  
+                                            
+                    <div class="box col-1 clearfix tb-terminal">
+                  
+                                                <div class="col-first col only last tb-height-balance tb-terminal">
+                          <div id="preheader-first-region" class="tb-region tb-scope">
+                              <div class="region region-preheader-first">
+  
+<div id="block-block-951" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+      <style>
+<!--/*--><![CDATA[/* ><!--*/
+
+#block-views-home-one-page-news-detail-block .view-home-one-page-news-detail li.views-row .views-field.views-field-nothing .social-share .sharewrap .shareTitle div, #block-views-home-one-page-news-detail-block .view-home-one-page-news-detail li.views-row .views-field.views-field-nothing .social-share .sharewrap .shareTitle iframe, #block-views-home-one-page-news-detail-block .view-home-one-page-news-detail li.views-row .views-field.views-field-nothing .social-share .sharewrap .shareTitle span{
+opacity: 0.01;
+  position: relative !important;
+  z-index: 10000;
+  width: 100% !important;
+  height: 20px !important;
+}
+div#block-block-951{
+ display:none;
+}
+
+/*--><!]]>*/
+</style>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-1001" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+      <style>
+<!--/*--><![CDATA[/* ><!--*/
+
+iframe.sub-button {
+  text-indent: 0px;
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
+  border-style: none;
+  float: none;
+  line-height: normal;
+  font-size: 1px;
+  vertical-align: baseline;
+  display: inline-block;
+  width: 85px;
+  height: 24px;
+}
+
+
+/*--><!]]>*/
+</style>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-981" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+      <style>
+<!--/*--><![CDATA[/* ><!--*/
+
+.subs-button {
+  text-indent: 0px;
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
+  border-style: none;
+  float: none;
+  line-height: normal;
+  font-size: 1px;
+  vertical-align: baseline;
+  display: inline-block;
+  width: 85px;
+  height: 24px;
+}
+
+iframe.optanon-category-C0003.subs-button {
+  position: static;
+  top: 0px;
+  width: 85px;
+  margin: 0px;
+  border-style: none;
+  left: 0px;
+  visibility: visible;
+  height: 24px;
+}
+
+/*--><!]]>*/
+</style>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-881" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+      <style>
+<!--/*--><![CDATA[/* ><!--*/
+
+.page-node-20321, body.not-front{
+  margin-top: 0 !important;
+}
+.view-splash .views-field.views-field-nothing {
+  display: none;
+}
+
+/*--><!]]>*/
+</style><script>
+<!--//--><![CDATA[// ><!--
+
+jQuery(window).load(function(){
+jQuery(".mlist-outer-wrapper").find('.termsWrapper a.terms').unbind('click');
+jQuery('.termsWrapper a.terms').click(function(){
+
+jQuery(this).toggleClass('showing');
+jQuery(this).parents('.termsWrapper').find('.termsContent').slideToggle();
+
+});
+});
+
+//--><!]]>
+</script>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-911" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+      <style>
+<!--/*--><![CDATA[/* ><!--*/
+
+#tklbContainer #lightBoxContent.lightBoxContent .turnKeyTextWrapper .turnKeyMerchData .merchDesc {
+  margin: 0 1px 15px;
+}
+
+/*--><!]]>*/
+</style>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-906" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+      <style>
+<!--/*--><![CDATA[/* ><!--*/
+
+div#block-block-801 .txt-wrap {
+  z-index: 2;  
+}
+@media only screen and (min-width: 768px){
+#preheader-first-region #block-block-801 .txt-wrap .btns-wrap {
+  max-width: 959px;
+}
+#block-block-801 .txt-wrap .album-wrap{
+font-size:64px;
+}
+#preheader-first-region #block-block-801 .txt-wrap .btns-wrap .links-wrap {
+  max-width: 821px;
+  padding: 0px 0 0 10px;
+}
+}
+@media only screen and (min-width: 768px) and (max-width:1023px){
+#preheader-first-region #block-block-801 .txt-wrap .btns-wrap {
+  max-width: 598px;
+}
+
+#preheader-first-region #block-block-801 .txt-wrap .btns-wrap .links-wrap {
+  max-width: 460px;
+  padding: 2px 0 0 10px;
+}
+#block-block-801 .txt-wrap .btns-wrap a {
+  font-size: 20px;
+}
+.touch #block-block-801 .image-wrapper img.ipad.ipad-landscape{
+display:none;
+}
+.touch #block-block-801 .image-wrapper img.ipad{
+display:block;
+}
+}
+
+@media only screen and (max-width: 1023px){
+#block-block-801 .image-wrapper img.ipad.ipad-landscape {
+  display: none;
+}
+}
+@media only screen and (min-width: 1024px){
+.touch #block-block-801 .image-wrapper img.ipad{
+display:none;
+}
+.touch #block-block-801 .image-wrapper img.ipad.ipad-landscape{
+display:block;
+}
+}
+
+@media only screen and (max-width:767px){
+#block-block-801 .txt-wrap .btns-wrap a.watch span.splash-play{
+  margin: 0 12px 0 0;
+}
+#block-block-801 .txt-wrap .btns-wrap a{
+letter-spacing:2px;
+}
+div#block-block-801 .txt-wrap {
+  z-index: 1;
+}
+}
+@media only screen and (min-width:1403px){
+div#block-block-801 .video-cnt img{
+width:100%;
+}
+}
+
+/*--><!]]>*/
+</style>    </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-891" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+      <style>
+<!--/*--><![CDATA[/* ><!--*/
+
+.node-type-blog div#block-flippy-flippy-pager-node-type-blog ul.flippy li a img {
+  padding-bottom: 0;
+}
+.node-type-blog ul.flippy {
+  
+  background: #f3f3f3;
+  display: block;
+  padding-bottom: 32px;
+  border-bottom: 3px solid #2f8b78;
+}
+.title-content {
+  padding-top: 34px;
+  padding-bottom: 32px;
+  border-bottom: 3px solid #2f8b78;
+  background: #f3f3f3;
+}
+
+.node-type-blog div#block-flippy-flippy-pager-node-type-blog ul.flippy li a span.title {
+  padding: 0;
+  margin: 34px 25px 12px;
+  min-height: 0;
+
+}
+
+.node-type-blog div#block-flippy-flippy-pager-node-type-blog ul.flippy li a {
+  padding-bottom: 0;
+  border: none;
+  background: none;
+  display: inherit;
+
+}
+.title-content span {
+  cursor: pointer;
+}
+.page-node-20091 #content, .page-node-20096 #content, .page-node-20321 #content {
+  min-height: calc(100vh - 330px) !important;
+}
+@media only screen and (max-width:767px){
+.node-type-blog #block-block-681 .left-mail-wrap .title-tour{
+line-height:35px;
+}
+}
+@media only screen and (min-width:768px){
+#block-views-home-one-page-news-detail-block .view-home-one-page-news-detail li.views-row .views-field.views-field-nothing {
+  padding: 26px 26px 33px;
+}
+#block-views-home-one-page-news-detail-block .view-home-one-page-news-detail li.views-row .views-field.views-field-nothing .detail-title {
+  margin: 13px 0 30px;
+}
+}
+
+/*--><!]]>*/
+</style>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-871" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+<style>
+<!--/*--><![CDATA[/* ><!--*/
+
+/*--><!]]>*/
+</style>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-551" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+                 
+            
+    <div class="content">
+      <div id="fb-root"></div>
+ </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-526" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+            
+    <div class="content">
+              <!--[if IE 8]>
+      <div id="IE8-BannerCon">
+          <div id="IE8-Banner">
+              <div class="IE8B-title">Internet Explorer 8 is no longer supported</div>
+              <div class="IE8B-message">
+                  To experience https://www.brunomars.com/ at its best, please install the latest version of
+                  <a href="https://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Internet Explorer</a>, 
+                  <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> or 
+                  <a href="https://getfirefox.com" target="_blank">Firefox</a>
+              </div> 
+          </div>
+          
+      </div>
+      <script>
+          jQuery("#IE8-BannerCon").prependTo("body");
+      </script>
+      <![endif]-->      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-876" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+  <div class="content">
+      <script type="text/javascript">
+var WMG = WMG || {};
+  WMGConfig = {
+      artistname : "Amir Alavi",
+      basePath : document.domain,
+      siteID : 8950, /*legacy eos id*/
+      feedbackLink : 'forum/category/topic-feedback-and-suggestions',
+      /*CellStream Block Configuration*/
+      CellStream : {
+          states : {
+              init : {
+                  width : '111px',
+                  height : '180px',
+                  left : ['0px', '134px', '268px'],
+                  top : '0px'
+              },
+              hover : {
+                  width : '203px',
+                  height : '252px',
+                  left : ['0px', '76px', '166px'],
+                  top : '-35px'
+              }
+          }
+      },
+      /*Ads Blocks Configuration*/
+      Ads : {
+          csid : '[site_variables:freewheel_csid]',
+          /*TBD*/
+          urlsMap : {
+              'home' : 'homepage',
+              'homepage' : 'homepage',
+              'blog(/.*)?' : 'blog',
+              'news(/.*)?' : 'blog',
+              'photo(/.*)?' : 'photos',
+              'album(/.*)?' : 'music',
+              'music(/.*)?' : 'music',
+              'about' : 'bio',
+              'community' : 'community',
+              'forum(/.*)?' : 'forum',
+              'node/add/forum' : 'forum',
+              'contact\-us' : 'contact',
+              'member(/.*)?' : 'members',
+              'user(/([0-9]+)/.*)?' : 'members'
+          }
+      },
+      /*MailingList Block Configuration*/
+      BITHandle : "[site_variables:bit_handle]", /*Bans in Town handle*/
+      YoutubeChannel : "[site_variables:youtube_channel]", /* Youtube Channel*/
+              fixedNavigation : false,
+    //   Twitter : {
+    //       handle : "Amir Alavi", /*Twitter account name*/
+    //       via : 'brunomars',
+    //       operation : 'search',
+    //       noOfTweets : 5,
+    //       tagLabel : '',
+    //       twitterCriteria : '',
+    //       /*Mapping Twitter Accounts to Site Profiles for Pro Users*/
+    //       TwitterMap : {}
+    //   },
+     
+  };
+  WMG = jQuery.extend(true, WMG, WMGConfig);
+
+//--><!]]>
+</script>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-views-splash-block-4" class="block block-views clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+            <h2>Descision Tree Javascript</h2>
+          
+            
+    <div class="content">
+      <div class="view view-splash view-id-splash view-display-id-block_4 view-dom-id-059c35d0eac2b8f30e8e0fd79f4e1cdc">
+      
+
+
+    <div class="view-content">
+    <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">  
+<div class="views-field views-field-field-external-css-reference">        <div class="field-content"></div>  </div></li>
+    </ul></div>    </div>
+
+
+
+
+    <div class="view-footer">
+    <script>
+<!--//--><![CDATA[// ><!--
+
+var lin=jQuery(".views-field-field-external-css-reference .field-content").html();
+jQuery("<link>").attr("rel","stylesheet").attr("href",lin).attr("type","text/css").appendTo(jQuery("head"));
+
+
+//--><!]]>
+</script>    </div>
+
+
+</div>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-861" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+      <script>
+<!--//--><![CDATA[// ><!--
+
+jQuery(document).ready(function(){
+jQuery('.node-type-blog #block-views-home-one-page-news-detail-block .views-field.views-field-nothing .detail-body a').attr('target','_blank');
+});
+
+//--><!]]>
+</script><style>
+<!--/*--><![CDATA[/* ><!--*/
+
+#block-views-events-block-2 .view-content .views-row .views-field-field-event-buylink > div a.comingsoonButton:hover{
+border: 1px solid #444141;
+padding:11px 0px;
+}
+#block-views-events-block-2 .view-content .views-row .views-field-field-event-buylink > div a.comingsoonButton:after{
+background: transparent;
+border-color: transparent;
+}
+#block-views-events-block-2 .view-content .views-row .views-field-field-event-buylink > div a.comingsoonButton{
+  opacity: 0.4;
+  cursor: default;
+  border: 1px solid #444141;
+  letter-spacing: 0.5px;
+}
+@media only screen and (max-width: 767px){
+.page-news-v1 #page #content #main h1.title#page-title {
+  padding: 33px 0 33px 10px;
+}
+}
+#block-views-home-one-page-news-detail-block .view-home-one-page-news-detail li.views-row .views-field.views-field-nothing .social-share .sharewrap {
+  max-width: 110px;
+}
+#block-block-701 .mlist-field.email input.error,
+.page-tour .mlist-outer-wrapper .right-mail-wrap fieldset .mlist-field.email input.error {
+  border: 1px solid #ff0000;
+}
+
+/*--><!]]>*/
+</style>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-796" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+      <script type="text/javascript" src="//fast.fonts.net/jsapi/b668e666-f2c0-4d97-9f8d-92aa8bba2b46.js"></script>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-811" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+      <!--<script>
+  $jq18(document).ready(function() {
+      $jq18('#subscribePageSignup').wmgSignUpForm();
+  }); 
+</script>-->
+<style>
+<!--/*--><![CDATA[/* ><!--*/
+
+      .mlist-outer-wrapper .mlist-wrapper .mlist-field label.error {
+          color: #d80203;
+          font: 12px "proxima-nova",Helvetica,Arial,sans-serif;
+          text-transform: none;
+      }
+      
+/*--><!]]>*/
+</style><script>
+<!--//--><![CDATA[// ><!--
+
+          $jq18(document).ready(function() {
+              var customValidator = {};
+              customValidator.validatorSettings = {
+                  rules : {
+                      email : {
+                          required : true,
+                      },
+                      country : {
+                          required : true
+                      }
+                  },
+                  messages : {
+                      email : {
+                          required : "Email address is a required field",
+                          email : "Please enter a valid email address"
+                      },
+                      country : {
+                          required : "Country field is required"
+                      }
+                  }
+              };
+      customValidator.isFirstForm = true;
+      customValidator.callBacks = {
+          onSuccess: function(){
+              if (customValidator.isFirstForm) {
+                  customValidator.isFirstForm = false;
+                  //vwoFormAnalysis('subscribePageSignup', 'success');
+              } else {
+                  //vwoFormAnalysis('secondForm', 'success');
+              }
+          }
+      };
+              //$jq18('#subscribePageSignup').wmgSignUpForm(customValidator);
+      $jq18('#subscribePageSignup').wmgSignUpForm(customValidator);
+          }); 
+      
+//--><!]]>
+</script><div class="secondFormCloseWrap">
+                          <a href="javascript:void(0)">x</a>
+                      </div>
+      <div class="mlist-outer-wrapper embedded-inline-list country-detect home footer">
+                      
+          <div class="mlist-wrapper">
+              <!-- Ajax Loader Icon -->
+              <div id="ajaxLoader" style="display: none">
+      
+              </div><!-- //ajaxLoader-->
+                            
+              <form nls_fa_name="" class="join-button-form" id="subscribePageSignup" method="get" action="" autocomplete="off">	
+                           <div class="left-mail-wrap">
+                  <div class="title-tour">
+                      SUBSCRIBE &amp; FOLLOW TO GET UPDATES FROM BRUNO MARS!
+                  </div>
+                  <!--div class="mlist-header">
+                      Subscribe and be one of the first <br>to know when Bruno is coming to your area!
+                  </div-->
+                  </div>		
+                  <fieldset><div id="serverError" style="display: none">
+                          Unable to process your request at this time. Please try again later.
+                      </div>
+                      <div id="errorMsg" style="display: none">
+                          Please fill out the correct information.
+                      </div>
+                      <div class="mlist-field email">
+                          <input id="email" name="email" tabindex="-1" type="email" class="m-required m-email" placeholder="E-Mail Address" /></div>
+                      <div class="mlist-submit">
+                          <a><input class="submit" type="submit" value="Submit" /></a>
+                      </div>
+                      <div class="primary-list-values">
+                          <input id="autoreply" name="autoreply" type="hidden" value="yes" /><!--<input type="hidden" name="ref_url" value="https://www.brunomars.com/video/666bd0-liquor-store-blues" />--><input id="Datasource" name="Datasource" type="hidden" value="BrunoMars_NewsletterOptIn_MainSignUp_Website" /><input id="mainListId" name="newsletterId" type="hidden" value="6956408" /></div>
+                  <div class="termsWrapper first">
+                      <div class="terms">
+                          <a href="javascript:void(0)" class="terms"></a>
+                      </div>
+                      <div class="termsContent">
+                          <div class="gdpr">&#13;
+By submitting my information, I agree to receive personalized updates and marketing messages about Bruno Mars based on my information, interests, activities, website visits and device data and in accordance with the <a target="_blank" href="//www.atlanticrecords.com/privacy-policy/">Privacy Policy</a>. I understand that I can opt-out at any time by emailing <a href="mailto:privacypolicy@wmg.com">privacypolicy@wmg.com.</a>&#13;
+</div>
+                      </div>
+                  </div>
+                  </fieldset></form>
+              <div id="thankyouBlock" style="display: none">
+                  <div class="thankyou-message embed" style="font-weight:bold;">
+                      Thank you!
+                  </div>
+                  <div class="data-source-value">
+                      <input id="Datasource" name="Datasource" type="hidden" value="BrunoMars_NewsletterOptIn_MainSignUp_Website" /></div>
+                  <form nls_fa_name="" id="secondForm" method="get" action="" novalidate="novalidate">
+                  <div id="thankyoublock-innerwrapper">
+      
+                      <div class="thankyou-message embed">
+                          Welcome <span class="emailAddress"></span> to <span>Bruno Mars'</span> mailing list!
+                      </div>
+                      <div class="thankswelcome-msg" style="text-align:left;font-size:15px;">
+                          CUSTOMIZE YOUR NOTIFICATIONS FOR TOUR DATES NEAR YOUR HOMETOWN, BIRTHDAY WISHES, OR SPECIAL DISCOUNTS IN OUR ONLINE STORE!
+                      </div>
+                      <div id="secondary-list-values" class="secondary-list-values">
+                          <div id="errorLabelContainer2" style="display: none">
+                              Please fill out the correct information.
+                          </div>
+                          <div class="mlist-field postalcode">
+                              <label for="postalcode">Postal Code</label>
+                              <input id="postalcode" name="postalcode" type="text" autofocus="" /></div>
+                          <div class="mlist-field country">
+                              <label for="country"> Country </label>
+                              <select id="country" name="country" class="m-required"><option value="">Select a country</option><option value="United States">United States</option><option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="American Samoa">American Samoa</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Anguilla">Anguilla</option><option value="Antarctica">Antarctica</option><option value="Antigua and Barbuda">Antigua and Barbuda</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bermuda">Bermuda</option><option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option><option value="Bosnia &amp; Herzegovina">Bosnia &amp; Herzegovina</option><option value="Botswana">Botswana</option><option value="Bouvet Island">Bouvet Island</option><option value="Brazil">Brazil</option><option value="British Ind Ocean Ter ">British Ind Ocean Ter </option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Canada">Canada</option><option value="Cape Verde">Cape Verde</option><option value="Cayman Islands">Cayman Islands</option><option value="Central African Rep">Central African Rep</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="Christmas Island">Christmas Island</option><option value="Cocos (Keeling Is)">Cocos (Keeling Is)</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Cook Islands">Cook Islands</option><option value="Costa Rica">Costa Rica</option><option value="Cote D'ivoire">Cote D'Ivoire </option><option value="Croatia (Hrvatska)">Croatia (Hrvatska)</option><option value="Cuba">Cuba</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option><option value="East Timor">East Timor</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Ethiopia">Ethiopia</option><option value="Falkland Islands ">Falkland Islands </option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France, Metro">France, Metro</option><option value="French Guiana">French Guiana</option><option value="French Polynesia">French Polynesia</option><option value="French Southern Ter">French Southern Ter</option><option value="Gabon">Gabon</option><option value="Gambia">Gambia</option><option value="Georgia">Georgia</option><option value="Georgia and S. Sand Is">Georgia and S. Sand Is</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Greece">Greece</option><option value="Greenland">Greenland</option><option value="Grenada">Grenada</option><option value="Guadeloupe">Guadeloupe</option><option value="Guam">Guam</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Heard &amp; McDonald Is">Heard &amp; McDonald Is</option><option value="Honduras">Honduras</option><option value="Hong Kong">Hong Kong</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option><option value="Korea (North) ">Korea (North) </option><option value="Korea (South)">Korea (South)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan ">Kyrgyzstan </option><option value="Laos">Laos</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macau">Macau</option><option value="Macedonia">Macedonia</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Marshall Islands">Marshall Islands</option><option value="Martinique">Martinique</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mayotte">Mayotte</option><option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montserrat">Montserrat</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="Netherlands Antilles">Netherlands Antilles</option><option value="Neutral Zone Saudi/Iraq">Neutral Zone Saudi/Iraq</option><option value="New Caledonia">New Caledonia</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Niue">Niue</option><option value="Norfolk Island">Norfolk Island</option><option value="Northern Mariana Is">Northern Mariana Is</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Pitcairn">Pitcairn</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Puerto Rico">Puerto Rico</option><option value="Qatar">Qatar</option><option value="Reunion">Reunion</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Saint Lucia">Saint Lucia</option><option value="St. Vincent/Grenadines ">St. Vincent/Grenadines </option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovakia (Slovak Rep)">Slovakia (Slovak Rep)</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="Soviet Union (former)">Soviet Union (former)</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="St. Helena">St. Helena</option><option value="St. Pierre and Miquelo ">St. Pierre and Miquelo </option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Svalbard &amp; Jan Mayen">Svalbard &amp; Jan Mayen</option><option value="Swaziland">Swaziland</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syria">Syria</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Togo">Togo</option><option value="Tokelau">Tokelau</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Turks and Caicos Is">Turks and Caicos Is</option><option value="Tuvalu">Tuvalu</option><option value="US Minor Outlying Is">US Minor Outlying Is</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom </option><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Vatican City State ">Vatican City State </option><option value="Venezuela">Venezuela</option><option value="Viet Nam">Viet Nam</option><option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option><option value="Virgin Islands (US)">Virgin Islands (US)</option><option value="Wallis and Futuna Is">Wallis and Futuna Is</option><option value="Western Sahara">Western Sahara</option><option value="Yemen">Yemen</option><option value="Yugoslavia">Yugoslavia</option><option value="Zaire">Zaire</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option></select></div>
+                          <div class="mlist-field mlist-field1">
+                              <label for="firstname">First name</label>
+                              <input id="firstname" name="firstname" type="text" /></div>
+                          <div class="mlist-field">
+                              <label for="birthday">Birth Date</label>
+                              <select name="dobMonth" id="dobMonth"><option value="">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select><select name="dobDay" id="dobDay"><option value="">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><!--<select name="dobYear" id="dobYear" class="m-required">
+                              <option value="">Year</option>undefined<option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option>
+                              </select>--></div>
+                          <!--input type="hidden" value="no" name="autoreply" id="labelListAutoReply"-->
+      
+                          <input id="mainListId" name="newsletterId" type="hidden" value="14075551" /><!--<input type="hidden" name="ref_url" value="https://www.brunomars.com/video/666bd0-liquor-store-blues" />--><div class="mlist-checks">
+                              <input type="checkbox" class="global-list-checkbox" name="newsletterId" value="50" /><label class="global-list" for="global-list">SIGN ME UP TO DISCOVER MORE ARTISTS LIKE BRUNO MARS AND OTHER OFFERS.</label>
+                          </div>
+                      </div>
+                      <div class="mlist-submit-new">
+                          <a><input class="submit" type="submit" value="Submit" /></a>
+                      </div>
+                      <div class="termsWrapper second">
+                          <div class="terms">
+                              <a href="javascript:void(0)" class="terms"></a>
+                          </div>
+                          <div class="termsContent">
+                              <div class="gdpr">By submitting my information, I agree to receive personalized updates and marketing messages about Bruno Mars based on my information, interests, activities, website visits and device data and in accordance with the <a target="_blank" href="//www.atlanticrecords.com/privacy-policy/">Privacy Policy</a>.  In addition, if I have checked the box above, I agree to receive such updates and messages about similar artists, products and offers. I understand that I can opt-out from messages at any time by emailing <a href="mailto:privacypolicy@wmg.com">privacypolicy@wmg.com.</a>&#13;
+</div>
+                          </div>
+                      </div>
+                  </div>
+                  </form>
+              </div><!-- //Thank you block -->
+              <!--terms -->
+          </div>
+      </div>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-806" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+      <script>
+<!--//--><![CDATA[// ><!--
+
+//Start of Animation for loading scroll function	
+  var docElem = window.document.documentElement;
+  function getViewportH() {
+      var client = docElem['clientHeight'], inner = window['innerHeight'];
+      if (client < inner)
+          return inner;
+      else
+          return client;
+  }
+
+  function scrollY() {
+      return window.pageYOffset || docElem.scrollTop;
+  }
+
+  function extend(a, b) {
+      for (var key in b ) {
+          if (b.hasOwnProperty(key)) {
+              a[key] = b[key];
+          }
+      }
+      return a;
+  }
+
+  function getOffset(el) {
+      var offsetTop = 0, offsetLeft = 0;
+      do {
+          if (!isNaN(el.offsetTop)) {
+              offsetTop += el.offsetTop;
+          }
+          if (!isNaN(el.offsetLeft)) {
+              offsetLeft += el.offsetLeft;
+          }
+      } while( el = el.offsetParent )
+
+      return {
+          top : offsetTop,
+          left : offsetLeft
+      }
+  }
+  function inViewport(el, h) {
+      var elH = el.offsetHeight, scrolled = scrollY(), viewed = scrolled + getViewportH(), elTop = getOffset(el).top, elBottom = elTop + elH,
+      // if 0, the element is considered in the viewport as soon as it enters.
+      // if 1, the element is considered in the viewport only when it's fully inside
+      // value in percentage (1 >= h >= 0)
+      h = h || 0;
+
+      return (elTop + elH * h) <= viewed && (elBottom - elH * h) >= scrolled;
+  }
+
+  function checkInViewport() {
+      //Animation for front page loading scroll function
+      jQuery(".block-block").each(function() {
+          if (inViewport(this, 0)) {
+              if (!jQuery(this).hasClass("animate")) {
+                  jQuery(this).addClass("animate");
+              }
+          }
+      });
+      //Animation for front page loading scroll function
+      jQuery(".block-views").each(function() {
+          if (inViewport(this, 0)) {
+              if (!jQuery(this).hasClass("animate")) {
+                  jQuery(this).addClass("animate");
+              }
+          }
+      });
+      
+          //Animation for front page loading scroll function
+      jQuery("#bit-events tr").each(function() {
+          if (inViewport(this, 0)) {
+              if (!jQuery(this).hasClass("animate")) {
+                  jQuery(this).addClass("animate");
+              }
+          }
+      });
+      
+              //Animation for front page loading scroll function
+      jQuery("#content li.views-row").each(function() {
+          if (inViewport(this, 0)) {
+              if (!jQuery(this).hasClass("animate")) {
+                  jQuery(this).addClass("animate");
+              }
+          }
+      });
+  
+  }
+  // End of Animation for loading scroll function
+jQuery(document).ready(function() {
+      //Animate on Scroll function call
+      
+      checkInViewport();
+      
+});
+
+jQuery(window).load(function() {
+      //Animate on Scroll function call
+      checkInViewport();
+});
+
+  jQuery(window).scroll(function() {
+  
+      //Animate on Scroll function call
+      checkInViewport();
+      
+  });	
+
+//--><!]]>
+</script><style>
+<!--/*--><![CDATA[/* ><!--*/
+
+@-webkit-keyframes fadeIn {
+100% {
+  opacity: 1;
+}
+}
+
+@keyframes fadeIn {
+100% {
+  opacity: 1;
+}
+}
+@media only screen and (min-width: 768px){
+#navigation .block-views:not(.mlist), #navigation .block-block:not(.mlist),
+#content .block-views:not(.mlist),#content .block-block:not(.mlist), #content .view:not(.view-events) li.views-row,
+#footer .block-views:not(.mlist),#footer .block-block:not(.mlist){
+  opacity:0;
+}
+#header .animate:not(.mlist), #navigation .animate:not(.mlist), 
+#content .animate:not(.mlist), #content .view:not(.view-events) .animate,
+#footer .animate:not(.mlist){
+-webkit-animation: fadeIn 0.65s ease forwards;
+animation: fadeIn 0.65s ease forwards;
+}
+}
+
+/*--><!]]>*/
+</style>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+
+<div id="block-block-786" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+      <style>
+<!--/*--><![CDATA[/* ><!--*/
+
+  .view-turnkey-lightbox-toaster {
+      display: none !important;
+  }
+#tklbContainer #lightBoxContent.lightBoxContent .turnKeyTextWrapper .turnKeyMerchData .merchLink a:hover{
+   color: #bf8e0e;
+}
+  #lightBoxContent.lightBoxContent.tkt {
+      top: auto !important;
+      right: 24px !important;
+      left: auto !important;
+      color: #000;
+      max-width: 360px;
+      background-color: #ffffff;
+      z-index: 10;
+      transition: all 500ms cubic-bezier(0.815, -0.46, 0.095, 1.48);
+      position: fixed;
+      height: auto !important;
+      padding: 15px;
+      display: block;
+      bottom: -500px;
+      box-sizing: border-box;
+      min-width: 360px;
+  }
+  #lightBoxContent.lightBoxContent.tkt.show_toaster {
+      bottom: 0 !important;
+      z-index: 100001;
+  }
+  #lightBoxContent.lightBoxContent.tkt.hide_toaster {
+      bottom: -600px !important;
+  }
+  #lightBoxContent.lightBoxContent.tkt input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+  }
+  #lightBoxContent.lightBoxContent.tkt .lightBoxClose a {
+      background-image: url("/sites/g/files/g2000006216/f/201709/bg_close1.png");
+      background-repeat: no-repeat;
+      display: block;
+      height: 17px;
+      position: absolute;
+      right: 5px;
+      text-indent: -9998px;
+      top: 8px;
+      width: 17px;
+      cursor: pointer;
+      z-index: 1;
+  }
+
+  #lightBoxContent.lightBoxContent.tkt select::-ms-expand {
+      display: none;
+  }
+  #lightBoxContent .mlist-wrapper {
+      margin-top: 0;
+  }
+  #lightBoxContent .mlist-wrapper div {
+      color: #444141;
+  }
+  #lightBoxContent .mlist-wrapper div#errorMsg, #lightBoxContent .mlist-wrapper div#serverError {
+      color: #ff0000;
+  }
+  #lightBoxContent .mlist-wrapper fieldset {
+      padding: 0;
+      max-width: 100%;
+  }
+  #lightBoxContent .mlist-wrapper fieldset .mlist-submit {
+      margin-top: 0;
+  }
+  #lightBoxContent .mlist-wrapper fieldset .mlist-submit a, #lightBoxContent .mlist-wrapper fieldset .mlist-submit a:hover {
+      border: none;
+  }
+  #lightBoxContent .mlist-wrapper fieldset .mlist-submit input {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      line-height: 33px;
+      height: 35px;
+      background: transparent;
+      color: #444141;
+      border: 1px solid #afafaf;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-family: "Helvetica Neue LT W01_77 Bd Cn", "Times New Roman", Times, serif;
+  }
+  #lightBoxContent .mlist-wrapper fieldset .mlist-submit input:hover {
+      background: #ffffff;
+      color: #bf8e0e;
+      border-color: #bf8e0e;
+  }
+  #lightBoxContent .mlist-wrapper fieldset .emailTitle {
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      font-family: "Helvetica Neue LT W01_77 Bd Cn", "Times New Roman", Times, serif;
+  }
+  form#lightBoxSignup {
+      margin: 0;
+  }
+  #lightBoxContent .mlist-wrapper fieldset .mlist-header {
+      padding: 10px 0;
+      font-size: 13px;
+      font-family: "Helvetica Neue LT W01_77 Bd Cn", "Times New Roman", Times, serif;
+      letter-spacing: 1px;
+  }
+  #lightBoxContent .mlist-wrapper .termsWrapper {
+      padding: 4px 0 0 0;
+      font-size: 9px;
+      font-weight: normal;
+      float: none;
+      width: 100%;
+  }
+  #lightBoxContent .mlist-wrapper .termsWrapper a {
+      font-weight: normal;
+      color: #444141;
+      text-decoration: underline;
+      display: inline-block;
+      border: none;
+  }
+  #lightBoxContent .mlist-wrapper .termsWrapper a:hover {
+      color: #444141;
+      text-decoration: none;
+  }
+  #lightBoxContent .mlist-wrapper .termsWrapper div.terms {
+      text-align: left;
+  }
+  #lightBoxContent .mlist-wrapper .termsWrapper a.terms {
+      text-transform: capitalize;
+      text-decoration: underline;
+      color: #444141;
+      text-align: left;
+      display: inline-block;
+      font-size: 11px;
+      font-family: "Helvetica Neue LT W01_77 Bd Cn", "Times New Roman", Times, serif;
+  }
+  #lightBoxContent .mlist-wrapper .termsWrapper a.terms:hover {
+      text-decoration: none;
+      color: #444141;
+  }
+
+  #lightBoxContent .mlist-wrapper #thankyouBlock {
+      padding: 0;
+  }
+  #lightBoxContent .mlist-wrapper #thankyouBlock .thankyou-message.embed {
+      text-align: center;
+      text-transform: uppercase;
+  }
+  #lightBoxContent .mlist-wrapper #thankyouBlock #errorLabelContainer2 {
+      color: #ff0000;
+  }
+  #lightBoxContent .mlist-wrapper #thankyouBlock .mlist-checks {
+      clear: both;
+      padding: 10px 0 0 0;
+      color: #000;
+      text-align: left;
+      margin: 0;
+      width: 100%;
+  }
+  #lightBoxContent .mlist-wrapper #thankyouBlock .mlist-submit-new {
+      padding: 0;
+  }
+  #lightBoxContent .mlist-wrapper #thankyouBlock .mlist-submit-new input {
+      margin: 0;
+      background: transparent;
+      color: #444141;
+      padding: 0;
+      height: 35px;
+      line-height: 33px;
+      border: 1px solid #afafaf;
+      font-size: 18px;
+      width: 100%;
+      max-width: none;
+  }
+  #lightBoxContent .mlist-wrapper .mlist-field #country option, #lightBoxContent .mlist-wrapper .mlist-field #dobDay option, #lightBoxContent .mlist-wrapper .mlist-field #dobMonth option {
+      background-color: #fff;
+  }
+  #lightBoxContent .mlist-wrapper #thankyouBlock .mlist-submit-new input:hover {
+      background: #ffffff;
+      color: #bf8e0e;
+      border-color: #bf8e0e;
+  }
+  #lightBoxContent .mlist-wrapper #thankyouBlock select#dobMonth {
+      float: left;
+      padding-left: 0.5em;
+      width: 47%;
+  }
+  #lightBoxContent .mlist-wrapper #thankyouBlock select#dobDay {
+      float: right;
+      padding-left: 0.5em;
+      width: 47%;
+      margin-right: 0;
+  }
+  .splash_overall {
+      background-color: #7F7F7F;
+      height: 100%;
+      left: 0;
+      opacity: 0.8;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      display: none;
+      cursor: pointer;
+  }
+  .turnKeyTextWrapper .mlist-outer-wrapper {
+      width: 100%;
+  }
+  #lightBoxContent.lightBoxContent .termsWrapper .termsContent {
+
+      font-size: 11px;
+      padding-top: 3px;
+      text-align: left;
+      background: transparent;
+      font-family: "Helvetica Neue LT W01_77 Bd Cn", "Times New Roman", Times, serif;
+      padding: 0;
+  }
+  body #lightBoxContent input:-webkit-autofill, #lightBoxContent input:-webkit-autofill:hover, #lightBoxContent input:-webkit-autofill:focus, #lightBoxContent select:-webkit-autofill:focus {
+      color: #000000;
+      -webkit-text-fill-color: #000000;
+      -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+  }
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper input::-webkit-input-placeholder {
+      color: #000000;
+      opacity: 1;
+  }
+
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper input:-moz-placeholder {
+      color: #000000;
+      opacity: 1;
+  }
+
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper input::-moz-placeholder {
+      color: #000000;
+      opacity: 1;
+  }
+
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper input:-ms-input-placeholder {
+      color: #000000;
+      opacity: 1;
+  }
+  #tklbContainer #lightBoxContent.lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper form .mlist-submit {
+      max-width: 100%;
+  }
+  @media only screen and (max-width: 767px) {
+      body.toaster {
+          padding-top: 0px !important;
+      }
+
+      .toaster #lightBoxContent.lightBoxContent {
+          width: 100%;
+          right: 0 !important;
+          max-width: 100%;
+          min-width: 0;
+          z-index: 10000;
+      }
+      #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper #thankyoublock-innerwrapper .mlist-field select, #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper #thankyoublock-innerwrapper .mlist-field input {
+          height: 25px;
+      }
+      #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper #thankyoublock-innerwrapper .mlist-field {
+          margin-bottom: 3px;
+      }
+      #lightBoxContent .mlist-wrapper #thankyouBlock .mlist-submit-new input {
+          height: 30px;
+          line-height: 30px;
+      }
+  }
+@media all and (max-width: 767px){
+
+#lightBoxContent.lightBoxContent.tklb .turnKeyTextWrapper{
+  color: #bf8e0e;
+  text-align: center;
+}
+#lightBoxContent.lightBoxContent.tklb .backGroundImage{
+      background-color: #c4bfa9;
+}
+#lightBoxContent .turnKeyMerchData {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Helvetica Neue LT W01_77 Bd Cn","Times New Roman",Times,serif;
+  margin: 0 0 15px;
+  color: #363938;
+}
+#lightBoxContent .merchLink a {
+  background: #bf8e0e;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  /* margin-top: 15px; */
+  max-width: 200px;
+  margin: 0 auto;
+  margin-top: 15px;
+   margin-bottom: 50px;
+}
+}
+
+
+
+/*--><!]]>*/
+</style><style>
+<!--/*--><![CDATA[/* ><!--*/
+
+  #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper .mlist-field select.error, #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper .mlist-field input.error {
+      border: 1px solid red;
+      color: #000000;
+  }
+  .turnKeyTextWrapper .mlist-outer-wrapper #errorMsg, .turnKeyTextWrapper .mlist-outer-wrapper #serverError {
+      color: red;
+      position: relative;
+      top: 0;
+      padding-bottom: 5px;
+  }
+  #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper .mlist-field select, #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper .mlist-field input {
+      width: 100%;
+      border: 1px solid #afafaf !important;
+      padding-left: 5px;
+      color: #444141;
+      background: #ffffff;
+      padding: 0 0 0 5px;
+      height: 35px;
+      box-sizing: border-box;
+      font-family: "Helvetica Neue LT W01_77 Bd Cn", "Times New Roman", Times, serif;
+  }
+  #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper .mlist-field select.error, #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper .mlist-field input.error {
+      border: 1px solid #ff0000 !important;
+  }
+  #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper .mlist-field.email {
+      width: 63%;
+      display: inline-block;
+      vertical-align: top;
+      float: none;
+      margin: 0;
+      margin-right: 2%;
+  }
+  #lightBoxContent .turnKeyTextWrapper .mlist-wrapper fieldset .mlist-submit {
+      margin-top: 0;
+      width: 35%;
+      vertical-align: top;
+      display: inline-block;
+      float: none;
+      padding: 0;
+  }
+  #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper #thankyoublock-innerwrapper .mlist-field label {
+      display: inline-block;
+      float: none;
+      font-size: 14px;
+      line-height: 14px;
+      margin: 0;
+      text-align: left;
+      width: 100%;
+      margin-right: 0;
+      letter-spacing: 1px;
+      padding: 8px 0;
+      color: #444141;
+      font-family: "Helvetica Neue LT W01_77 Bd Cn","Times New Roman",Times,serif;
+  }
+  #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper .mlist-field.country, #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper .mlist-field.postalcode {
+      display: inline-block;
+      width: 47%;
+      vertical-align: middle;
+  }
+  #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper .mlist-field.postalcode {
+      margin-right: 0%;
+  }
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper #thankyouBlock input[type="checkbox"] {
+      display: inline-block;
+      vertical-align: middle;
+      width: 18px;
+      height: 18px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border: 1px solid #afafaf;
+      background: #ffffff;
+      margin-right: 0;
+      position: relative;
+      border-radius: 0;
+      opacity: 1;
+  }
+  .firefox #lightBoxContent.lightBoxContent .mlist-outer-wrapper #thankyouBlock input[type="checkbox"] {
+      outline: 1px solid #000000;
+  }
+  .firefox #lightBoxContent.lightBoxContent .mlist-outer-wrapper #thankyouBlock input[type="checkbox"].error {
+      outline: 1px solid #ff0000;
+  }
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper #thankyouBlock input[type="checkbox"]:checked:after {
+      content: '\2714';
+      font-size: 9px;
+      position: relative;
+      top: 0px;
+      left: 0;
+      color: #000000;
+      text-align: center;
+      line-height: 16px;
+      display: block;
+  }
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper .global-list {
+      font-size: 11px;
+      display: inline-block;
+      font-weight: normal;
+      cursor: pointer;
+      padding-left: 0;
+      vertical-align: middle;
+      line-height: 10px;
+      padding-top: 0px;
+      font-family: "Helvetica Neue LT W01_77 Bd Cn","Times New Roman",Times,serif;
+  }
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper .mlist-wrapper #thankyouBlock .mlist-submit-new {
+      float: none;
+      margin-bottom: 0;
+      width: 100%;
+      margin: 0 auto;
+  }
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper .mlist-wrapper #thankyouBlock .termsWrapper.second .terms {
+      clear: both;
+      float: none;
+      text-align: left;
+      width: 100%;
+  }
+  #lightBoxContent.lightBoxContent #thankyoublock-innerwrapper .mlist-submit-new a {
+      border: none;
+  }
+  #lightBoxContent.lightBoxContent #thankyoublock-innerwrapper .mlist-submit-new a:hover {
+      padding: 7px 0;
+  }
+  
+  #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper .mlist-field select {
+      background: url("/sites/g/files/g2000006216/f/201709/bg_select_arrow1.png") no-repeat right center #ffffff !important;
+      padding: 0 20px 0 5px;
+  }
+  #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper #thankyouBlock .mlist-field select {
+      border: 1px solid #afafaf !important;
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAAMklEQVQYV2Ncv379fwYCIDAwkJERpAafYpAikBowgUsxTBGKQnTFyIowFMIUoysCiQMAblwUBtbWt5EAAAAASUVORK5CYII=') no-repeat scroll center right 5px !important;
+  }
+  #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper #thankyouBlock .mlist-field select.error {
+      border: 1px solid #ff0000 !important;
+  }
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper .mlist-wrapper .thankswelcome-msg {
+      margin: 10px 0;
+      text-align: left;
+      letter-spacing: 1px;
+      font-weight: 400;
+      font-size: 11px;
+  }
+
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper.embedded-inline-list.country-detect .termsWrapper.termsWrapper.first a.terms:after, #lightBoxContent.lightBoxContent .mlist-outer-wrapper.embedded-inline-list.country-detect .termsWrapper.termsWrapper.first a.terms.showing:after {
+      display: inline-block;
+      text-align: left;
+      width: auto;
+      text-decoration: underline;
+  }
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper.embedded-inline-list.country-detect .termsWrapper.termsWrapper.first a.terms:hover:after, #lightBoxContent.lightBoxContent .mlist-outer-wrapper.embedded-inline-list.country-detect .termsWrapper.termsWrapper.first a.terms.showing:hover:after {
+      color: #000000;
+      text-decoration: underline;
+  }
+
+  #block-block-756 {
+      display: none;
+  }
+  #lightBoxContent.lightBoxContent .mlist-field {
+      width: 65%;
+      display: inline-block;
+      vertical-align: top;
+      float: none;
+      margin: 0;
+  }
+  #tklbContainer #lightBoxContent.lightBoxContent .turnKeyTextWrapper {
+      background: #c4bfa9;
+  }
+
+  #tklbContainer #lightBoxContent.lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper form .mlist-header {
+      color: #000;
+      font-size: 12px;
+  }
+  #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper .mlist-field select, #lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper .mlist-field input {
+      background-color: #fff !important;
+  }
+  #lightBoxContent .mlist-outer-wrapper .mlist-wrapper #thankyouBlock .mlist-field {
+      width: 100%;
+  }
+  #tklbContainer #lightBoxContent.lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper #thankyouBlock .mlist-checks {
+      padding-top: 5px;
+  }
+
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper .global-list {
+      margin-left: 5px;
+      color: #444141;
+      width: calc(100% - 23px);
+  }
+  #lightBoxContent.lightBoxContent.tkt .lightBoxClose a, #lightBoxContent.lightBoxContent .lightBoxClose.turnKeyClose a {
+      background-image: url(/sites/g/files/g2000003801/f/201609/bg_close1.png);
+      background-repeat: no-repeat;
+      display: block;
+      height: 17px;
+      position: absolute;
+      right: 5px;
+      text-indent: -9998px;
+      top: 8px;
+      width: 17px;
+      cursor: pointer;
+      z-index: 1;
+      opacity
+  }
+  #lightBoxContent.lightBoxContent.tkt .lightBoxClose a:hover, #lightBoxContent.lightBoxContent .lightBoxClose.turnKeyClose a:hover {
+      opacity: 0.5;
+      background-position: initial;
+  }
+  .mlist-outer-wrapper .mlist-wrapper #thankyouBlock .mlist-field {
+      margin-bottom: 10px;
+  }
+  .mlist-outer-wrapper.embedded-inline-list.country-detect .termsWrapper .termsContent {
+      position: initial;
+  }
+  #tklbContainer #lightBoxContent.lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper #thankyouBlock .mlist-checks {
+      margin: 0;
+  }
+  #tklbContainer #lightBoxContent.lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper #thankyouBlock .mlist-submit-new {
+      padding: 0;
+      margin-top: 10px;
+  }
+
+  #lightBoxContent .mlist-outer-wrapper.embedded-inline-list.country-detect #thankyouBlock #thankyoublock-innerwrapper .thankyou-message {
+      display: block !important;
+  }
+  #lightBoxContent .mlist-outer-wrapper.embedded-inline-list.country-detect #thankyouBlock .thankyou-message {
+      display: none !important;
+  }
+  #lightBoxContent .mlist-outer-wrapper.embedded-inline-list.country-detect #thankyouBlock.final-screen .thankyou-message {
+      display: block !important;
+  }
+
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper .mlist-wrapper .thankswelcome-msg {
+      font-size: 11px !important;
+      margin-bottom: 0
+  }
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper .mlist-wrapper #thankyouBlock .mlist-field {
+      margin-bottom: 0;
+      padding: 0;
+  }
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper .mlist-wrapper #thankyouBlock .mlist-field.postalcode, #lightBoxContent.lightBoxContent .mlist-outer-wrapper .mlist-wrapper #thankyouBlock .mlist-field.country {
+      width: 47%;
+      display: inline-block;
+      vertical-align: top;
+  }
+  #lightBoxContent.lightBoxContent .mlist-outer-wrapper .mlist-wrapper #thankyouBlock .mlist-field.postalcode {
+      margin-right: 6%;
+  }
+  .turnKeyImageWrapper {
+      float: left;
+      width: 50%;
+  }
+
+  .turnKeyImage img {
+      height: auto;
+      width: 100%;
+  }
+
+  #block-block-901  .turnKeyTextWrapper {
+      display: table;
+      float: left;
+      width: 50%;
+      box-sizing: border-box;
+      padding: 12px;
+      float: none;
+      background-color: #fff;
+      height: 100%;
+  }
+
+  #block-block-901 .mlist-outer-wrapper.embedded-inline-list.country-detect.tkOmniture {
+      height: 100%;
+      display: table;
+      width: 100%;
+  }
+
+  #block-block-901 .mlist-wrapper {
+      height: 100%;
+      display: table;
+      width: 100%;
+  }
+
+  #block-block-901 form#lightBoxSignup {
+      display: table-cell;
+      vertical-align: middle;
+  }
+  #tklbContainer #lightBoxContent.lightBoxContent {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background-color: #fff;
+      color: #363938;
+      padding: 0;
+      position: fixed;
+      z-index: 100003;
+  }
+  #block-block-911 {
+      display: none;
+  }
+  #tklbContainer #lightBoxContent.lightBoxContent .turnKeyTextWrapper .mlist-outer-wrapper .mlist-wrapper #thankyouBlock.final-screen {
+      display: table-cell;
+      vertical-align: middle;
+  }
+  #tklbContainer #lightBoxContent.lightBoxContent .turnKeyTextWrapper .turnKeyGeneric .genericCTA a:hover {
+      color: #bf8e0e;
+  }
+  @media only screen and (min-width: 768px) and (max-width:1023px) {
+      #tklbContainer #lightBoxContent.lightBoxContent .lightBoxClose.turnKeyClose a{
+right:20px;
+}
+  }
+  @media only screen and (max-width: 767px) {
+      div#lightBoxContent {
+          z-index: 100000;
+          position: relative;
+      }
+      .turnKeyImageWrapper {
+          float: none;
+          width: 100%;
+      }
+      .turnKeyGeneric {
+          color: #363938;
+          width: 80%;
+          text-align: center;
+          margin: 30px auto;
+      }
+      #lightBoxContent.lightBoxContent.tklb .lightBoxClose.turnKeyClose a {
+          top: auto;
+      }
+  }
+@media all and (max-width: 767px){
+
+#lightBoxContent.lightBoxContent.tklb .turnKeyTextWrapper{
+  color: #bf8e0e;
+  text-align: center;
+}
+}
+
+
+/*--><!]]>*/
+</style><script>
+<!--//--><![CDATA[// ><!--
+
+  jQuery(document).ready(function() {
+      jQuery(".mlist-outer-wrapper").find('.termsWrapper a.terms').unbind('click');
+      jQuery(".mlist-outer-wrapper").find('.termsWrapper a.terms').click(function() {
+          jQuery(this).toggleClass('showing');
+          jQuery(this).parents('.termsWrapper').find('.termsContent').slideToggle();
+      });
+  }); 
+
+//--><!]]>
+</script>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+</div>
+                          </div>
+                        </div> <!-- /#preheader-first-region -->
+                                                
+                                            
+                                          
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+              
+              
+      <!-- Navigation --> 
+              
+    </div> <!-- /#header -->
+    
+    <div id="content" class="wrapper-content wrapper clearfix tb-scope">
+      <div class="wrapper-1 tb-terminal tb-content-wrapper-1">
+    
+        <div id="content-deco-top" class="deco-content-top deco-content deco-top deco tb-scope tb-scope-prefer">
+          <div class="width deco-width inner tb-terminal">
+            <div class="layer-a layer"></div>
+            <div class="layer-b layer"></div>
+            <div class="layer-c layer"></div>
+            <div class="layer-d layer"></div>
+          </div>
+        </div>
+        
+        <div id="content-deco-bottom" class="deco-content-bottom deco-content deco-bottom deco tb-scope tb-scope-prefer">
+          <div class="width deco-width inner tb-terminal">
+            <div class="layer-a layer"></div>
+            <div class="layer-b layer"></div>
+            <div class="layer-c layer"></div>
+            <div class="layer-d layer"></div>
+          </div>
+        </div>
+      
+                  
+                    <div id="breadcrumb" class="stack-breadcrumb stack clearfix tb-scope">
+            <div class="stack-width inset-1 inset tb-terminal">
+              <div class="inset-2 inset tb-terminal">
+                <div class="inset-3 inset tb-terminal">
+                  <div class="inset-4 inset tb-terminal">
+                    <div class="box col-1 clearfix tb-terminal">
+                      <div id="breadcrumb-region" class="col tb-region tb-scope tb-height-balance">
+                        <h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="/">Home</a></div>                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                      
+                
+        
+           
+        <div id="content-inner" class="stack-content-inner stack clearfix tb-scope">
+          <div class="stack-width inset-1 inset tb-terminal">
+            <div class="inset-2 inset tb-terminal">
+              <div class="inset-3 inset tb-terminal">
+                <div class="inset-4 inset tb-terminal">
+                  <div class="box clearfix tb-terminal tb-preview-shuffle-regions">
+                    
+                                          
+                                            
+                     <!-- end sidebars -->
+                    
+                    <div id="main" class="col-c tb-height-balance tb-region tb-scope tb-primary">
+                                              <div class="pane">
+                        <a id="skip-to-content-target" class="skip-to-link" title="Target of skip-to-content link"></a>
+                                                                              <h1 class="title" id="page-title">Bruno Mars - 10th Anniversary - Doo-Wops &amp; Hooligans</h1>
+                                                                                                        <div class="tabs"></div>
+                                                                                                                                  <div id="content-area" class="content-area">  <div class="region region-content">
+  
+<div id="block-system-main" class="block block-system clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+      <div id="node-28661" class="node node-splash-page-lightbox node-promoted odd clearfix" about="/doowops10" typeof="sioc:Item foaf:Document">
+
+
+  
+<div class="float-overflow tb-terminal">
+          <span property="dc:title" content="Bruno Mars - 10th Anniversary - Doo-Wops &amp; Hooligans" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+                                      
+var digitalData={							
+  settings:{						
+      reportSuites:"wmgbrunomars.com,wmgatl,wmg"					
+  },						
+  page:{						
+      pageInfo:{					
+          pageName:"Bruno Mars:Doo-Wops & Hooligans 10th Anniversary:Splash",				
+          server:"Bruno Mars:Site",				
+          platform:"Drupal 7",				
+          devTeam:"WMAS"				
+      },					
+      category:{					
+          primaryCategory:"Bruno Mars:Splash Page",				
+          pageType:"Splash Page:Album Anniversary"				
+      }					
+  },						
+  content:{						
+      artist:"Bruno Mars",					
+      label:"Atlantic Records"					
+                          
+  }						
+}													
+
+//--><!]]>
+</script><script class="optanon-category-C0003" type="text/plain" src="https://fpt.fm/app/sdk/platform.js?campaign=25618"></script><script class="optanon-category-C0003" type="text/plain">
+<!--//--><![CDATA[// ><!--
+
+  jQuery('.popupWrapper').hide();
+
+//--><!]]>
+</script><script>
+<!--//--><![CDATA[// ><!--
+
+  function playVideos(event) {
+      event.target.playVideo();
+  }
+  function VideoPlay1() {
+      jQuery('.videoOuterWrapper1 .videoThumbnail1').click(function (e) {
+          e.preventDefault();
+          var playerID = jQuery(this).attr('id');
+          var youtubeID = jQuery(this).attr('data-videoid');
+          var playerListID = jQuery(this).attr('data-videoplaylistid');
+          player = new YT.Player(playerID, {
+              height: '523',
+              width: '930',
+              videoId: youtubeID,
+              playerVars: {
+                  listType: 'playlist',
+                  controls: 1,
+                  list: playerListID
+              },
+              host: 'https://www.youtube-nocookie.com',
+              events: {
+                  'onReady': playVideos,
+                  'onStateChange': onPlayerStateChange
+              }
+          });
+      });
+  }
+  function musicEmbedChange() {
+      jQuery('.streamDropdown > div').click(function () {
+          var streamText = jQuery(this).text().trim();
+          var streamTextHtml = jQuery(this).find("div").html();
+          var index = jQuery(this).index();
+          var streamSrc = jQuery(this).attr('streamsrc');
+          var videoId = jQuery(this).attr("video-id");
+          var playlistId = jQuery(this).attr("playlist-id");
+          jQuery(this).parents('.musicSection').find('.streamDropdown > div').removeClass('active');
+          jQuery(this).parents('.musicSection').find('.streamEmbeds > div').removeClass('active');
+          jQuery(this).addClass('active');
+          jQuery(this).parents('.musicSection').find('.streamFromText').html(streamTextHtml);
+          jQuery(this).parents('.musicSection').find('.streamEmbeds div').eq(index).addClass('active');
+          jQuery(this).parents('.musicSection').find('.streamEmbeds div').find('iframe').each(function(){
+              jQuery(this).attr('src' , jQuery(this).attr('src'));
+          });
+          if (streamSrc != "" && jQuery(this).parents('.musicSection').find('.streamEmbeds div').eq(index).find('iframe').attr('src').length == 0) {
+              jQuery(this).parents('.musicSection').find('.streamEmbeds div.tidal-embed').hide();
+              jQuery(this).parents('.musicSection').find('.streamEmbeds div').eq(index).find('iframe').attr('src', streamSrc);
+          } else if (streamSrc == "") {
+
+          }
+          if (streamText.toLowerCase() === "youtube") {
+               function playMusicVideo(event) {
+                   event.target.playVideo();
+               }
+               var idGen = parseInt(Math.random() * 26);
+               var playerID = "ytPlayer" + idGen;
+               var playerListID = playlistId;
+               var youtubeID = videoId;
+
+
+               jQuery(this).parents('.musicSection').find('.streamEmbeds div').eq(index).find('iframe').attr('id', playerID);
+
+               var player = new YT.Player(playerID, {
+                   height: '390',
+                   width: '340',
+                   videoId: youtubeID,
+                   playerVars: {
+                       listType: 'playlist',
+                       controls: 1,
+                       list: playerListID
+                   },
+                   events: {
+                       'onReady': playMusicVideo,
+                       'onStateChange': onPlayerStateChange
+                   }
+               });
+
+           }
+      });
+  }
+  function musicEmbedInitialLoad() {
+      jQuery('.streamDropdown > div:first-child').each(function () {
+          var streamText = jQuery(this).text().trim();
+          var streamTextHtml = jQuery(this).find("div").html();
+          var index = jQuery(this).index();
+          var streamSrc = jQuery(this).attr('streamsrc');
+          var videoId = jQuery(this).attr("video-id");
+          var playlistId = jQuery(this).attr("playlist-id");
+          jQuery(this).parents('.musicSection').find('.streamDropdown > div').removeClass('active');
+          jQuery(this).parents('.musicSection').find('.streamEmbeds > div').removeClass('active');
+          jQuery(this).addClass('active');
+          jQuery(this).parents('.musicSection').find('.streamFromText').html(streamTextHtml);
+          jQuery(this).parents('.musicSection').find('.streamEmbeds div').eq(index).addClass('active');
+
+          if (streamSrc != "" && jQuery(this).parents('.musicSection').find('.streamEmbeds div').eq(index).find('iframe').attr('src').length == 0) {
+              jQuery(this).parents('.musicSection').find('.streamEmbeds div.tidal-embed').hide();
+              jQuery(this).parents('.musicSection').find('.streamEmbeds div').eq(index).find('iframe').attr('src', streamSrc);
+          } else if (streamSrc == "") {
+
+          }
+          if (streamText.toLowerCase() === "youtube") {
+              function playMusicVideo(event) {
+
+              }
+              var idGen = parseInt(Math.random() * 26);
+              var playerID = "ytPlayer" + idGen;
+              var playerListID = playlistId;
+              var youtubeID = videoId;
+              jQuery(this).parents('.musicSection').find('.streamEmbeds div').eq(index).find('div').attr('id', playerID);
+              
+              var player = new YT.Player(playerID, {
+                  height: '390',
+                  width: '340',
+                  videoId: youtubeID,
+                  //host: 'https://www.youtube-nocookie.com',
+                  playerVars: {
+                      listType: 'playlist',
+                      controls: 1,
+                      list: playerListID
+                  },
+                  events: {
+                      'onReady': playMusicVideo,
+                      'onStateChange': onPlayerStateChange
+                  }
+              });
+          }
+      });
+  }
+  (function () {
+      var col;
+      var init;
+      if (jQuery(window).width() <= 767) {
+           col = 1;
+           init = 3;
+        } 
+        else if ((jQuery(window).width() > 767) && (jQuery(window).width() < 1024)){
+           col = 3;
+           init = 3;
+        }
+        else {
+           col = 4;
+           init = 4;
+        }
+      Livefyre.require([
+          'streamhub-wall#5'
+      ], function (LiveMediaWall) {
+          var wall = window.wall = new LiveMediaWall({
+              el: document.getElementById("splashwall"),
+              collection: {
+                  "app": "main",
+                  "network": "wmg.fyre.co",
+                  "siteId": "365227",
+                  "articleId": "designer-app-1601404850010"
+              },
+              postButton: true,
+              initial: init,
+              columns: col,
+              showMore: 8,
+              minContentWidth: 312
+          });
+      });
+  }());
+  jQuery(window).load(function() {
+  //    jQuery('.hub-content-container').length
+
+  // 	jQuery( ".livefyreWrap" ).append( '<div class="hublist" data-lf-package="streamhub-wall#4.3.2"><div class="livefyreCarousel">');
+
+  // 	jQuery('.hub-content-container').each(function(){
+  // 		jQuery(this).appendTo(jQuery('.livefyreCarousel'))
+  // 	})
+
+  // 	$jq111('.livefyreCarousel').owlCarousel({
+  // 			loop: true,
+  // 			responsiveClass: true,
+  // 			margin: 10,
+  // 			items: 1,
+  // 			nav: true,
+  // 			autoHeight: true,
+  // 			stagePadding: 0,
+  // 			responsive: {
+  // 				0: {
+  // 					margin: 25,
+  // 					items: 1,
+  // 					nav: false,
+  // 					stagePadding: 20
+  // 				},
+  // 				768: {
+  // 					margin: 20,
+  // 					items: 3,
+  // 					nav: false,
+  // 					stagePadding: 20
+  // 				},
+  // 				1024: {
+  // 					margin: 20,
+  // 					items: 3,
+  // 					stagePadding: 120
+  // 				}
+  // 			}
+  // 		});
+  });
+  jQuery(document).ready(function () {
+      musicEmbedChange();
+      jQuery(".streamFromText").click(function () {
+          jQuery(this).siblings(".streamDropdown").slideToggle();
+      });
+      jQuery(".streamDropdown > div").click(function () {
+          jQuery(this).parents(".streamDropdown").slideToggle();
+      });
+      jQuery('link[rel="shortcut icon"]').attr('href', 'https://www.brunomars.com/sites/g/files/g2000006216/f/202009/fav.png');
+      VideoPlay1();
+      var customValidator = {};
+      customValidator.customPageName = "Doo-Wops & Hooligans 10th Anniversary:Splash";
+      customValidator.validatorSettings = {
+          rules: {
+              email: {
+                  required: true,
+              },
+              country: {
+                  required: true
+              }
+          },
+          messages: {
+              email: {
+                  required: "Email address is a required field",
+                  email: "Please enter a valid email address"
+              },
+              country: {
+                  required: "Country field is required"
+              }
+          }
+      };
+      $jq18('#signupFormsplash').wmgSignUpForm(customValidator);
+      var connect_button;
+      var load_int = setInterval(function() {
+          if (typeof WMGConnect === "undefined") {
+              //console.log("Waiting for script to load...");
+          } else {
+               connect_button = new WMGConnect(".wmg-button", {
+                  // Would you like a popup "Thank you" message to automatically appear once the user has been acquired?
+                  opt_in_thank_you_enabled: false,
+                  opt_in_dialogue_enabled: false,
+
+                  // Data sources are automatically generated based on how the campaign is set up but you can specify a custom one below
+                  exacttarget_datasource: 'BrunoMars_DooWops10thAnniversary_Splash_Website'
+              });
+
+              connect_button.setCallback(function (connect_data) {
+                  // Callback code
+                  console.info(connect_data);
+                  serviceId = connect_data.service;
+                  //var emailIdApple = jQuery("#appleSignUp #email").val();
+                  console.log(serviceId);
+                  if (serviceId == "spotify") {
+                      jQuery('a.wmg-button.spotifyButton').html('<img class="spotify-icon" src="/sites/g/files/g2000006216/f/202009/spotify_icon.svg?vjk">added');
+                      emailId = connect_data.user.email;
+                      
+                      //sendCDCRequestFormOneSpotify(emailId);
+
+                  }
+
+                  else {
+                      jQuery('a.wmg-button.appleButton').html('<img class="apple-icon" src="/sites/g/files/g2000006216/f/202009/apple_icon.svg?vjk">added');
+                      //emailId = connect_data.user.email;
+                      //emailId = emailIdApple;
+                      //sendCDCRequestFormOneApple(emailId);
+                  }
+                  console.log("success");
+                  // _satellite.track("music pre-save");
+              });
+              clearInterval(load_int);
+          }
+      }, 100);
+      jQuery('.wmg-button').click(function(){
+          if(typeof(WMGConnect) === "undefined"){
+              jQuery('.popupWrapper').show();
+              jQuery('.popupClose').click(function(){
+                  jQuery('.popupWrapper').hide();
+              });
+          }
+      });
+
+  });
+
+//--><!]]>
+</script><link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/fe2bcdde-fb3c-4f56-9fe3-c5decc702c95.css"><link rel="stylesheet" href="https://use.typekit.net/btt6igr.css"><style>
+<!--/*--><![CDATA[/* ><!--*/
+
+@font-face {
+font-family: 'bksicomoon';
+src:  url('/sites/g/files/g2000006216/f/201811/bksicomoon.eot?x7n20j');
+src:  url('/sites/g/files/g2000006216/f/201811/bksicomoon.eot?x7n20j#iefix') format('embedded-opentype'),
+  url('/sites/g/files/g2000006216/f/201811/bksicomoon.ttf?x7n20j') format('truetype'),
+  url('/sites/g/files/g2000006216/f/201811/bksicomoon.woff?x7n20j') format('woff'),
+  url('/sites/g/files/g2000006216/f/201811/bksicomoon.svg?x7n20j#bksicomoon') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+[class^="bksicon-"], [class*=" bksicon-"] {
+/* use !important to prevent issues with browser extensions that change fonts */
+font-family: 'bksicomoon' !important;
+speak: none;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+
+/* Better Font Rendering =========== */
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+.bksicon-spotify:before {
+content: "\ea94";
+}
+.bksicon-youtube:before {
+content: "\ea9d";
+}
+.bksicon-appleinc:before {
+content: "\eabe";
+}
+.bksicon-soundcloud:before {
+content: "\e900";
+}
+.bksicon-deezer:before {
+content: "\e901";
+}
+.inner.tb-terminal {
+  max-width: 100%;
+  margin:0;
+}
+.node-unpublished{
+  background-color: #FFB600;
+}
+.page-node #main .pane .tabs {
+  display: none;
+}
+div#toolbar, div#block-views-splash-block-4 {
+  display: none;
+}
+body {
+  padding: 0 !important;
+  margin: 0;
+  color: #000;
+  font-family: 'Helvetica Neue LT W05_75 Bold';
+      background-color: #FFB600;
+}
+div#header {
+  margin: 0;
+}
+div#content-area .content .field-label-above {
+  display: none;
+}
+.popupWrapper {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+  font-size: 20px;
+  background: #FFB600;
+  z-index: 10000000000;
+  width: 90%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+.popupInner {
+  padding: 50px 25px;
+  position: relative;
+}
+.popupWrapper .ot-sdk-show-settings {
+  border-bottom: 1px solid #000;
+  color: #000;
+}
+.popupClose {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  line-height: 1;
+}
+a.popupClose {
+  color: #000;
+}
+.headertopWrap {
+  max-width: 25.2vw;
+  margin: 0 auto;
+  margin-left: 5vw;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.headerWrap {
+  padding-top: 6.4vw;
+  padding-bottom: 2.7vw;
+  position: relative;
+}
+.artistLogo {
+  max-width: 11.3vw;
+  margin: 0 auto;
+}
+.fixedBgmob{
+  display: none;
+}
+.headerText {
+  font-size: 1.3vw;
+  margin-top: -0.7vw;
+}
+.video-section {
+  max-width: 50.15vw;
+  margin: 0 auto;
+  margin-left: 2.1vw;
+  padding-top: 2.65vw;
+  padding-bottom: 6.92vw;
+  position: relative;
+  z-index: 2;
+}
+.videoText {
+  font-size: 1.56vw;
+  padding-bottom: 0.2vw;
+}
+.fixedBg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 0;
+  /* width: 50.5vw; */
+  height: 100vh;
+  text-align: right;
+}
+.fixedBg img {
+  height: 100vh;
+}
+.splashWrapper {
+  position: relative;
+  z-index: 1;
+}
+.streamFrom {
+  display: inline-block;
+}
+.streamText {
+  position: relative;
+  letter-spacing: 0;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  padding-right: 1vw;
+  text-transform: lowercase;
+  font-size: 1.56vw;
+  padding-bottom: 0.4vw;
+}
+.streamText span {
+  transition: all 0.5s;
+  margin-left: 0.2vw;
+  display: inline-block;
+  font-size: 1.4vw;
+  vertical-align: initial;
+  height: 1.6vw;
+}
+.streamText span.bksicon-youtube {
+  font-size: 1.5vw;
+}
+.streamFromText {
+  display: inline-block;
+  font-size: 0;
+  text-decoration: none;
+  width: 2.5vw;
+  vertical-align: middle;
+}
+div.streamFromText:after {
+  background-image: url(/sites/g/files/g2000006216/f/202009/down-arrow.svg);
+  padding-right: 0;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  content: '';
+  width: 1.1vw;
+  background-size: cover;
+  height: 1.4vw;
+  display: inline-block;
+  position: absolute;
+  bottom: 0.55vw;
+  right: 0vw;
+}
+.streamDropdown {
+  position: absolute;
+  top: 2vw;
+  z-index: 2;
+  /* left: unset; */
+  right: 0.1vw;
+  text-align: right;
+  width: calc(100%);
+  padding-right: 1.8vw;
+  /* padding: 5px 10px 5px 131px; */
+  box-sizing: border-box;
+  max-width: none;
+  background: #FFB600;
+  padding-top: 0.1vw;
+}
+.musicSection {
+  position: relative;
+  z-index: 2;
+}
+.streamDropdown {
+  display: none;
+}
+.streamDropdown>div {
+  padding-bottom: 0.4vw;
+}
+.streamDropdown>div.active {
+  display: none;
+}
+.streamDropdown>div>div {
+  font-size: 0;
+}
+.streamEmbeds .youtube {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.streamEmbeds>div {
+  display: none;
+}
+.streamEmbeds>div.active {
+  display: block;
+}
+.streamEmbeds .youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.videoOuterWrapper1 {
+  width: 100%;
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  z-index: 3;
+}
+.videoOuterWrapper1>div>img, .videoOuterWrapper1 iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+span.youtubeplay {
+  position: absolute;
+  bottom: 6.4%;
+  right: 3.5%;
+  width: 2.56vw;
+}
+.videoTitle {
+  position: absolute;
+  bottom: 6.6%;
+  left: 3.5%;
+  font-size: 1.25vw;
+  color: #fff;
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+}
+.presaveWrap {
+  max-width: 37.96vw;
+  margin: 0 auto;
+  margin-left: 2.1vw;
+  position: relative;
+  z-index: 3;
+}
+.presaveTitle {
+  max-width: 30.57vw;
+  font-size: 1.56vw;
+  padding-top: 0.8vw;
+}
+.anniversaryLogo {
+  padding-top: 0.2vw;
+  width: 100%;
+}
+.anniversaryLogo img {
+  width: 100%;
+}
+.roadBg {
+  position: absolute;
+  top: -2.2%;
+  left: -10%;
+  width: 73vw;
+}
+.roadBg img{
+  width: 100%;
+}
+.roadBg2 {
+  position: absolute;
+  bottom: -24%;
+  left: -41%;
+  width: 67vw;
+}
+.roadBg3 {
+  position: absolute;
+  bottom: -5%;
+  left: 9%;
+  width: 72.96vw;
+}
+.roadBg3 img {
+  width: 100%;
+}
+.roadBg2 img{
+  width: 100%;
+}
+.presaveBtns > div {
+  display: inline-block;
+  width: 10.625vw;
+  text-align: center;
+}
+.presaveBtns {
+  font-size: 0;
+  text-align: center;
+  padding-top: 1.2vw;
+}
+.presaveImg img {
+  border: 1px solid #FFB600;
+}
+.presaveBtns > div a {
+  font-size: 1.04vw;
+  display: inline-block;
+  width: 100%;
+  height: 2.4vw;
+  line-height: 2.4vw;
+  background: #FDF0BD;
+  color: #000;
+  position: relative;
+  cursor: pointer;
+}
+.spotifyBtn {
+  margin-right: 1vw;
+}
+.presaveBtns img {
+  position: absolute;
+  top: 50%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  width: 1.2vw;
+}
+.presaveBtns img.apple-icon {
+  width: 1vw;
+  top: 46.5%;
+}
+.livefyreWrap {
+  border: 0.52vw solid #F9ECC1;
+  background: #FFB600;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  padding-bottom: 5vw;
+}
+.block-flockler-wall{
+  border: 0.52vw solid #F9ECC1;
+  background: #FFB600;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  padding-bottom: 5vw;
+}
+.livefyreTitle {
+  max-width: 32.7vw;
+  margin: 0 auto;
+  font-size: 1.5625vw;
+  padding-top: 6.25vw;
+  padding-bottom: 5.15vw;
+}
+.merchWrapper {
+  text-align: center;
+  background: #F9ECC1;
+  padding-bottom: 11.8vw;
+}
+.merchImg {
+  max-width: 48.2vw;
+  margin: 0 auto;
+}
+.merchTitle {
+  font-size: 3.65vw;
+  text-transform: lowercase;
+  padding-top: 6.4vw;
+  padding-bottom: 2.76vw;
+}
+a.shopBtn {
+  display: inline-block;
+  width: 10.625vw;
+  height: 2.4vw;
+  line-height: 2.4vw;
+  font-size: 1.04vw;
+  background: #0E0E0E;
+  text-transform: lowercase;
+  color: #FFB600;
+}
+.followWrap {
+  background: #F9ECC1;
+  text-align: center;
+  padding-bottom: 7.4vw;
+}
+.followTitle {
+  font-size: 3.65vw;
+  text-transform: lowercase;
+  padding-top: 8.07vw;
+  padding-bottom: 0.72vw;
+}
+.followImg {
+  max-width: 37vw;
+  margin: 0 auto;
+  padding-bottom: 3.28vw;
+}
+a.enterButton {
+  display: inline-block;
+  width: 10.625vw;
+  height: 2.4vw;
+  line-height: 2.4vw;
+  font-size: 1.04vw;
+  background: #0E0E0E;
+  text-transform: lowercase;
+  color: #FFB600;
+}
+a:hover {
+  opacity: 0.5;
+}
+/* .streamhub-media-wall-1601372280600 .hub-wall-column {
+  width: 100%;
+} */
+div#splashwall {
+  /* opacity: 0;
+  display: none; */
+  max-width: 95%;
+  margin: 0 auto;
+}
+.owl-carousel .owl-stage {
+  left: -120px;
+}
+.owl-controls {
+  display: none;
+}
+.hublist {
+  width: 95%;
+  margin: 0 auto;
+  margin-right: 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+[data-lf-package~="streamhub-wall#4.3.2"] .content,
+[data-lf-package~="streamhub-wall#4.3.2"] .hub-list article.content,
+.livefyreCarousel .content, .livefyreCarousel .hub-list article.content{
+  background-color: #FFB600;
+  border: 0.52vw solid #FDF0BD;
+}
+[data-lf-package~="streamhub-wall#4.3.2"] .content-default a span, .livefyreCarousel .content-default a span {
+  position: static !important;
+}
+[data-lf-package~="streamhub-wall#4.3.2"] .content-default .content-body,
+.livefyreCarousel .content-default .content-body {
+  font-family: 'Helvetica Neue LT W05_75 Bold';
+  color: #000;
+  font-size: 1.56vw;
+}
+[data-lf-package~="streamhub-wall#4.3.2"] .content-default a,
+[data-lf-package~="streamhub-wall#4.3.2"] .content.content-tweet .content-author-verified, 
+[data-lf-package~="streamhub-wall#4.3.2"] .content.content-tweet .content-source-logo,
+.livefyreCarousel .content-default a, .livefyreCarousel .content.content-tweet .content-author-verified, .livefyreCarousel .content.content-tweet .content-source-logo {
+  color: #000;
+}
+[data-lf-package~="streamhub-wall#4.3.2"] .content-default .content-byline .content-author-name a,
+[data-lf-package~="streamhub-wall#4.3.2"] .content.content-tweet .hub-btn.hub-content-action-favorite>a, 
+[data-lf-package~="streamhub-wall#4.3.2"] .content.content-tweet .hub-btn.hub-content-action-reply>a, 
+[data-lf-package~="streamhub-wall#4.3.2"] .content.content-tweet .hub-btn.hub-content-action-retweet>a,
+[data-lf-package~="streamhub-wall#4.3.2"] .content-default .content-author-username, 
+[data-lf-package~="streamhub-wall#4.3.2"] .content-default .content-author-username a, 
+[data-lf-package~="streamhub-wall#4.3.2"] .content-default .content-created-at, 
+[data-lf-package~="streamhub-wall#4.3.2"] .content-default .content-created-at a,
+.livefyreCarousel .content-default .content-byline .content-author-name a, .livefyreCarousel .content.content-tweet .hub-btn.hub-content-action-favorite>a, 
+.livefyreCarousel .content.content-tweet .hub-btn.hub-content-action-reply>a, .livefyreCarousel .content.content-tweet .hub-btn.hub-content-action-retweet>a,
+.livefyreCarousel .content-default .content-author-username, .livefyreCarousel .content-default .content-author-username a, .livefyreCarousel .content-default .content-created-at, 
+.livefyreCarousel .content-default .content-created-at a {
+  color: #000;
+}
+[data-lf-package~="streamhub-wall#4.3.2"] .content-default .content-byline .content-author-username, 
+[data-lf-package~="streamhub-wall#4.3.2"] .content-default .content-byline .content-author-username a,
+.livefyreCarousel .content-default .content-byline .content-author-username, .livefyreCarousel .content-default .content-byline .content-author-username a {
+  color: #000;
+  font-family: 'Helvetica Neue LT W05_75 Bold';
+}
+[data-lf-package~="streamhub-wall#4.3.2"] .hub-list-more, [data-lf-package~="streamhub-wall#4.3.2"] .hub-list-queue,
+.livefyreCarousel .hub-list-more, .livefyreCarousel .hub-list-queue {
+  font-size: 1.04vw;
+  display: inline-block;
+  width: 100%;
+  height: 2.4vw;
+  line-height: 2.4vw;
+  background: #FDF0BD;
+  color: #000;
+  position: relative;
+  width: 10.625vw;
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+  transition: all 0.5s;
+  text-transform: lowercase;
+  font-family: 'Helvetica Neue LT W05_75 Bold';
+  margin-top: 1vw;
+}
+[data-lf-package~="streamhub-wall#4.3.2"] .hub-list-more:hover {
+  border: 0;
+  background: #FDF0BD;
+  opacity: 0.5;
+}
+a.flockler-btn-new, a.flockler-btn-load-more, 
+a.flockler-btn-load-more.is-loading, a.flockler-btn-load-more.is-disabled {
+  font-size: 1.04vw;
+  height: 2.4vw;
+  line-height: 2.4vw;
+  background: #FDF0BD;
+  color: #000;
+  width: 10.625vw;
+  border-radius: 0;
+  border: 0;
+  transition: all 0.5s;
+  text-transform: lowercase;
+  font-family: 'Helvetica Neue LT W05_75 Bold';
+  padding: 0;
+  font-size: 0;
+}
+.flockler-popup__modal .flockler-popup-item__body__text a:hover {
+  color: #bf8e0e;
+}
+a.flockler-btn-load-more::after{
+  content: 'load more';
+  font-size: 1.04vw
+}
+a.flockler-btn-new.is-loading, a.flockler-btn-new.is-loading:hover, a.flockler-btn-load-more.is-loading, a.flockler-btn-load-more.is-loading:hover {
+  color: #000;
+}
+a.flockler-btn-new:active, a.flockler-btn-new:hover, a.flockler-btn-load-more:active, a.flockler-btn-load-more:hover {
+  background: #FDF0BD;
+  color: #000;
+}
+/* mlist css */
+.FooterWrap {
+  background: #000;
+}
+.termsWrapper .termsContent {
+  background: #000;
+  color: #fff;
+  font-family: 'Helvetica Neue LT W05_75 Bold';
+}
+.termsWrapper.second .termsContent{
+  text-align: center;
+  padding: 5px;
+  background-color: #FFB600;
+  border: 1px solid #fff;
+}
+.termsWrapper .termsContent a {
+  color: #fff;
+  text-decoration: underline;
+}
+fieldset .mlist-field.email input {
+  font-family: 'Helvetica Neue LT W05_65 Medium';
+  text-align: center;
+  border: 0;
+  border-bottom: 1px solid #FFB600;
+  color: #fff;
+  height: 3vw;
+  font-size: 0.937vw;
+}
+#thankyoublock-innerwrapper .mlist-field input, #thankyoublock-innerwrapper .mlist-field select{
+  height: 3vw;
+  font-size: 0.937vw;
+  font-family: 'Helvetica Neue LT W05_65 Medium';
+}
+.mlist-wrapper {
+  max-width: 38.5vw;
+  margin: 0 auto;
+  padding-top: 10.4vw;
+}
+.mlist-header {
+  font-size: 3.65vw;
+  text-transform: lowercase;
+  color: #FFB600;
+  text-align: center;
+}
+fieldset {
+  max-width: 100%;
+}
+.mlist-header2 {
+  font-size: 1.5625vw;
+  text-transform: lowercase;
+  color: #fff;
+  padding-top: 0.6vw;
+  padding-bottom: 5.2vw;
+  display: block;
+}
+fieldset .mlist-field.email {
+  display: block;
+  max-width: 90%;
+  margin: 0 auto;
+}
+fieldset .mlist-submit a {
+  border: 0;
+  transition: all 0.5s;
+}
+fieldset .mlist-submit a:hover {
+  border: 0;
+  opacity: 0.5;
+}
+.termsWrapper a.terms:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.mlist-outer-wrapper .termsWrapper.first .termsContent{
+  background-color: #FFB600;
+}
+fieldset .mlist-submit a input.submit, #thankyoublock-innerwrapper .mlist-submit-new a input.submit {
+  display: block;
+  font-size: 1.04vw;
+  background: #FDF0BD;
+  text-transform: lowercase;
+  color: #000;
+  border: 0;
+  letter-spacing: 0;
+  width: 10.625vw;
+  height: 2.4vw;
+  font-family:'Helvetica Neue LT W05_75 Bold';
+}
+fieldset .mlist-submit a:after, #thankyoublock-innerwrapper .mlist-submit-new a:after {
+  display: none;
+}
+fieldset .mlist-submit {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-width: 10.625vw;
+  height: 2.4vw;
+  line-height: 2.4vw;
+  margin: 0 auto;
+  margin-top: 1vw;
+  border: 0;
+}
+#thankyoublock-innerwrapper .mlist-submit-new a {
+  padding: 0;
+  border: 0;
+}
+#thankyoublock-innerwrapper .mlist-submit-new {
+  max-width: 10.625vw;
+}
+#thankyoublock-innerwrapper .secondFormCloseWrap a:hover{
+  color: #fff;
+}
+#thankyoublock-innerwrapper .mlist-submit-new a:hover {
+  padding: 0;
+  border: 0;
+}
+.termsWrapper.first {
+  text-align: center;
+  color: #fff;
+  padding-top: 1.35vw;
+}
+.termsWrapper a.terms {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  letter-spacing: 0;
+  font-size: 0.52vw;
+}
+input::-webkit-input-placeholder {
+color: #fff;
+opacity: 1;
+-webkit-text-fill-color: #fff !important;
+}
+input:-moz-placeholder {  /* Firefox 18- */
+
+color: #fff;
+opacity: 1;
+-webkit-text-fill-color: #fff;
+}
+input::-moz-placeholder {
+/* Firefox 19+ */
+
+color: #fff;
+opacity: 1;
+-webkit-text-fill-color: #fff;
+}
+input:-ms-input-placeholder {
+color: #fff;
+opacity: 1;
+-webkit-text-fill-color: #fff;
+}
+input#email::placeholder {
+color: #fff;
+opacity: 1;
+-webkit-text-fill-color: #fff;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+color: #fff !important;
+-webkit-text-fill-color: #fff !important;
+-webkit-box-shadow: 0 0 0 1000px #000 inset !important;
+box-shadow: 0 0 0 1000px #000 inset !important;
+}
+#thankyoublock-innerwrapper .secondFormCloseWrap a{
+  top: -35px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover, 
+textarea:-webkit-autofill:focus, 
+textarea:-webkit-autofill:active
+select:-webkit-autofill,
+select:-webkit-autofill:hover, 
+select:-webkit-autofill:focus, 
+select:-webkit-autofill:active {
+color: #fff;
+-webkit-text-fill-color: #fff;
+-webkit-box-shadow: 0 0 0 1000px #000 inset !important;
+box-shadow: 0 0 0 1000px #000 inset !important;
+}
+div#thankyoublock-innerwrapper {
+  position: relative;
+  transform: none;
+  width: 100%;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+}
+.termsWrapper.first {
+  max-width: 90%;
+  margin: 0 auto;
+}
+#thankyouBlock #thankyoublock-innerwrapper .thankyou-message {
+  color: #fff;
+  font-size: 1.7vw;
+}
+#thankyoublock-innerwrapper .thankswelcome-msg {
+  color: #fff;
+  font-size: 1vw;
+  text-align: center;
+}
+#thankyoublock-innerwrapper .mlist-field label {
+  color: #fff;
+  font-size: 1vw;
+}
+#thankyoublock-innerwrapper .mlist-checks label.global-list {
+  color: #fff;
+}
+#thankyouBlock.final-screen .thankyou-message {
+  color: #fff;
+  font-size: 1.7vw;
+}
+#thankyoublock-innerwrapper .mlist-field select option {
+  background: #000;
+  color: #fff;
+}
+
+/* footer css */
+.enterSite {
+  padding-top: 7.13vw;
+  font-size: 1.5625vw;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 6.6vw;
+}
+a.enterSiteBtn {
+  color: #fff;
+  text-transform: lowercase;
+  text-decoration: underline;
+}
+.SocialWrap {
+  text-align: center;
+}
+.socials .footer-social li:hover {
+  opacity: 0.5;
+}
+.footer-wrapper {
+  text-align: center;
+  padding-top: 1.458vw;
+  font-size: 0.57vw;
+  color: #fff;
+  font-family: "proxima-nova",Helvetica,Arial,sans-serif;
+  letter-spacing: 0.114vw;
+  text-transform: uppercase;
+  padding-bottom: 0.8vw;
+}
+.footer-wrapper span {
+  color: #fff;
+}
+.footer-wrapper a {
+  color: #fff;
+}
+br.mob {
+  display: none;
+}
+.socials .footer-social li {
+  display: inline-block;
+  padding: 0;
+  vertical-align: middle;
+  background-image: url(/sites/g/files/g2000006216/f/201611/Facebook.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  transition: all 0.5s;
+}
+.socials .footer-social li.fs-fb {
+  background-image: url(/sites/g/files/g2000006216/f/201611/Facebook.svg);
+  width: 9px;
+}
+.socials .footer-social li.fs-tw {
+  background-image: url(/sites/g/files/g2000006216/f/201611/Twitter.svg);
+  width: 19px;
+  height: 16px;
+}
+.socials .footer-social li.fs-ig {
+  background-image: url(/sites/g/files/g2000006216/f/201611/Instagram.svg);
+  width: 18px;
+  height: 18px;
+}
+.socials .footer-social li.fs-yt {
+  background-image: url(/sites/g/files/g2000006216/f/201611/Youtube.svg);
+  width: 22px;
+  height: 16px;
+}
+.socials .footer-social li.fs-sp {
+  background-image: url(/sites/g/files/g2000006216/f/201611/Spotify.svg);
+}
+.socials .footer-social li.fs-ap {
+  background-image: url(/sites/g/files/g2000006216/f/201611/Apple.svg);
+  width: 16px;
+}
+.socials .footer-social li a:hover {
+  opacity: 1;
+}
+.socials .footer-social li {
+  margin-right: 23px;
+}
+.socials .footer-social li.spotify-button {
+  background: none;
+  margin-right: 0;
+}
+.socials .footer-social li a {
+  text-indent: -9999px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.socials .footer-social li a.fs-fb-link {
+  background-image: url(/sites/g/files/g2000006216/f/201611/Facebook-hover.svg);
+  opacity: 0;
+  width: 9px;
+}
+.socials .footer-social li a.fs-tw-link {
+  width: 19px;
+  height: 16px;
+  opacity: 0;
+  background-image: url(/sites/g/files/g2000006216/f/201611/Twitter-hover.svg);
+}
+.socials .footer-social li a.fs-ig-link {
+  background-image: url(/sites/g/files/g2000006216/f/201611/Instagram-hover.svg);
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+}
+.socials .footer-social li a.fs-yt-link {
+  background-image: url(/sites/g/files/g2000006216/f/201611/Youtube-hover.svg);
+  width: 22px;
+  height: 16px;
+  opacity: 0;
+}
+.socials .footer-social li a.fs-sp-link {
+  background-image: url(/sites/g/files/g2000006216/f/201611/Spotify-hover.svg);
+  opacity: 0;
+}
+.socials .footer-social li a.fs-ap-link {
+  background-image: url(/sites/g/files/g2000006216/f/201611/Apple-hover.svg);
+  opacity: 0;
+  width: 16px;
+}
+@media only screen and (max-width: 1023px) {
+.fixedBg img {
+  height: auto;
+  width: 214px;
+  margin: 0 auto;
+  margin-right: 0;
+}
+.fixedBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 57%;
+  z-index: 2;
+  height: auto;
+}
+.fixedBgmob{
+  display: block;
+}
+.fixedBgdesk{
+  display: none;
+}
+.headerWrap {
+  padding-top: 29px;
+  padding-bottom: 26px;
+  max-width: 375px;
+  margin: 0 auto;
+}
+.headertopWrap {
+  max-width: 171px;
+  margin-left: 8px;
+}
+.artistLogo {
+  max-width: 122px;
+}
+.headerText {
+  font-size: 13px;
+  margin-top: -5px;
+}
+.roadBg {
+  top: 51px;
+  left: -120px;
+  width: 465px;
+}
+.anniversaryLogo {
+  padding-top: 37px;
+}
+.splashWrapper {
+  z-index: auto;
+}
+.video-section {
+  max-width: 279px;
+  margin: 0 auto;
+  padding: 0;
+  background: #FFB600;
+  margin-top: 24px;
+}
+.videoText {
+  font-size: 16px;
+  padding-bottom: 2px;
+}
+.streamText {
+  font-size: 16px;
+  padding-bottom: 3px;
+}
+.streamText span {
+  margin-left: 4px;
+  font-size: 17px;
+  height: 20px;
+}
+.streamText span.bksicon-youtube {
+  font-size: 19px;
+}
+.streamFromText {
+  width: 40px;
+}
+div.streamFromText:after {
+  width: 13px;
+  height: 14px;
+  bottom: 4px;
+}
+.streamDropdown {
+  top: 20px;
+  padding-right: 21px;
+  padding-top: 8px;
+  right: 2px;
+}
+.streamDropdown>div {
+  padding-bottom: 7px;
+}
+span.youtubeplay {
+  width: 15px;
+  bottom: 9.7px;
+  right: 12.36px;
+}
+.videoTitle {
+  font-size: 12px;
+  bottom: 9px;
+  left: 10px;
+}
+.roadBg2 {
+  width: 530px;
+  top: 78px;
+  left: -185px;
+  height: 100%;
+}
+.presaveWrap {
+  max-width: 279px;
+  padding-top: 45px;
+  margin: 0 auto;
+}
+.presaveTitle {
+  max-width: 243px;
+  margin: 0 auto;	
+  font-size: 16px;
+  margin-left: 0;
+  padding-top: 0;
+}
+.presaveBtns {
+  padding-top: 18px;
+}
+.presaveBtns > div {
+  display: block;
+  width: 287px;
+  margin-bottom: 26px;
+}
+.presaveBtns > div a {
+  height: 46px;
+  line-height: 46px;
+  font-size: 20px;
+}
+.presaveBtns img {
+  width: 24px;
+  left: 37px;
+}
+.presaveBtns img.apple-icon {
+  width: 21px;
+  left: 37px;
+}
+.roadBg3 {
+  bottom: 240px;
+  width: 650px;
+  left: -170px;
+}
+.livefyreWrap {
+  border: 10px solid #F9ECC1;
+  padding-bottom: 70px;
+}
+.livefyreTitle {
+  font-size: 18px;
+  max-width: 297px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.merchTitle {
+  font-size: 28px;
+  padding-top: 50px;
+  padding-bottom: 22px;
+}
+.merchImg {
+  width: 89%;
+  margin: 0 auto;
+  max-width: 335px;
+  padding-bottom: 18px;
+}
+.merchWrapper {
+  padding-bottom: 55px;
+}
+a.shopBtn {
+  width: 204px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 20px;
+}
+.mlist-wrapper {
+  max-width: 320px;
+  padding-top: 70px;
+}
+.mlist-header {
+  font-size: 28px;
+}
+span.mlist-header2 {
+  font-size: 16px;
+  padding-top: 12px;
+  max-width: 261px;
+  margin: 0 auto;
+  padding-bottom: 12px;
+}
+fieldset .mlist-field.email input {
+  height: 46px;
+  padding: 0;
+  font-size: 16px;
+}
+fieldset .mlist-submit {
+  max-width: 204px;
+  height: 46px;
+  line-height: 46px;
+  margin-top: 15px;
+}
+fieldset .mlist-submit a input.submit, #thankyoublock-innerwrapper .mlist-submit-new a input.submit {
+  width: 204px;
+  height: 46px;
+  font-size: 20px;
+}
+.termsWrapper a.terms {
+  font-size: 10px;
+  padding-top: 8px;
+}
+.enterSite {
+  font-size: 28px;
+  padding-top: 29px;
+  padding-bottom: 57px;
+}
+.footer-wrapper {
+  padding-top: 32px;
+  padding-bottom: 20px;
+  font-size: 11px;
+  letter-spacing: 2.2px;
+  margin: 0 auto;
+  max-width: 320px;
+}
+br.mob {
+  display: block;
+}
+span.mob {
+  display: none;
+}
+#thankyoublock-innerwrapper .mlist-field input, #thankyoublock-innerwrapper .mlist-field select {
+  font-size: 16px;
+  height: 46px;
+}
+#thankyoublock-innerwrapper .mlist-field label {
+  font-size: 16px;
+}
+#thankyoublock-innerwrapper .thankswelcome-msg {
+  font-size: 16px;
+}
+#thankyouBlock #thankyoublock-innerwrapper .thankyou-message {
+  font-size: 20px;
+}
+#thankyoublock-innerwrapper .mlist-submit-new {
+  max-width: 204px;
+}
+#thankyouBlock.final-screen .thankyou-message {
+  font-size: 20px;
+}
+.mlist-outer-wrapper [type="checkbox"]:not(:checked) + label:after, .mlist-outer-wrapper [type="checkbox"]:checked + label:after{
+  top: 4px;
+}
+.mlist-outer-wrapper [type="checkbox"]:not(:checked) + label:before, .mlist-outer-wrapper [type="checkbox"]:checked + label:before{
+  margin-top: 4px;
+}
+.hublist{
+  width: 90%;
+}
+[data-lf-package~="streamhub-wall#4.3.2"] .content .content-body>*,
+.hublist .content .content-body>*{
+  font-size: 16px;
+}
+[data-lf-package~="streamhub-wall#4.3.2"] .content, [data-lf-package~="streamhub-wall#4.3.2"] .hub-list article.content, .livefyreCarousel .content, .livefyreCarousel .hub-list article.content {
+  border: 10px solid #FDF0BD;
+}
+[data-lf-package~="streamhub-wall#4.3.2"] .hub-list-more, [data-lf-package~="streamhub-wall#4.3.2"] .hub-list-queue, .livefyreCarousel .hub-list-more, .livefyreCarousel .hub-list-queue {
+  width: 204px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 20px;
+  margin-top: 15px;
+}
+a.flockler-btn-load-more, a.flockler-btn-load-more.is-loading, a.flockler-btn-load-more.is-disabled{
+  width: 204px;
+  height: 46px;
+  line-height: 46px;
+}
+a.flockler-btn-load-more::after{
+  font-size: 20px;
+}
+.owl-carousel .owl-stage {
+  left: -20px;
+}
+.socials .footer-social li{
+  margin-right: 20px;
+}
+.socials .footer-social li.fs-fb{
+  margin-left: 10px;
+}
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+.fixedBg {
+  width: 55vw;
+}
+.roadBg {
+  width: 66vw;
+  top: -0.3vw;
+}
+.anniversaryLogo {
+  padding-top: 0.5vw;
+}
+.roadBg2 {
+  bottom: -25%;
+  left: -46%;
+}
+.fixedBg img {
+  width: 100%;
+}
+.video-section {
+  max-width: 44.5vw;
+}
+}
+
+@media only screen 
+and (min-device-width : 1025px) 
+and (max-device-width : 1499px) 
+{ 
+.fixedBg {
+  width: 50vw;
+}
+}
+
+@media only screen and (min-width: 1500px) {
+.fixedBg {
+  width: 50.5vw;
+}
+.roadBg {
+  width: 71vw;
+  top: -1.6vw;
+}
+.anniversaryLogo {
+  padding-top: 0.5vw;
+}
+.roadBg2 {
+  bottom: -25%;
+  left: -42%;
+}
+.fixedBg img {
+  width: 100%;
+}
+.video-section {
+  max-width: 48.5vw;
+}
+[data-lf-package~="streamhub-wall#4.3.2"] .content p {
+  line-height: 1.5;
+}
+}
+@media screen and (device-aspect-ratio: 2/3) {
+  .roadBg{
+      top: 48px;
+  }
+  .fixedBg{
+      width: 60%;
+  }
+  .headertopWrap{
+      max-width: 141px;
+  }
+  .video-section{
+      margin-top: 7px;
+  }
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  .roadBg{
+      top: 48px;
+  }
+  .fixedBg{
+      width: 60%;
+  }
+  .headertopWrap{
+      max-width: 141px;
+  }
+  .video-section{
+      margin-top: 7px;
+  }
+}
+
+/*--><!]]>*/
+</style></head><body><div class="fixedBg">
+  <img src="/sites/g/files/g2000006216/f/202009/Brunonew.png" class="fixedBgdesk"><img src="/sites/g/files/g2000006216/f/202009/Bruno.png" class="fixedBgmob"></div>
+<div class="splashWrapper">
+  <div class="headerWrap">
+      <div class="headerinnerWrap">
+          <div class="headertopWrap">
+              <div class="artistLogo">
+                  <a href="https://www.brunomars.com/?frontpage=true" class="artistLogoImg" custom-link-name="Bruno Mars Logo"><img src="/sites/g/files/g2000006216/f/202009/Brunologo.png" class="logoImg"></a>
+              </div>
+              <div class="headerText">doo-wops &amp; hooligans</div>
+              <div class="anniversaryLogo">
+                  <img src="/sites/g/files/g2000006216/f/202009/10th%20anniversary.svg" class="anniversaryImg"></div>
+          </div>
+          <div class="roadBg"><img src="/sites/g/files/g2000006216/f/202009/road.png" class="newimg"></div>
+          <div class="video-section">
+                  <div class="musicSection ">
+                      <div class="streamFrom">
+                          <div class="streamText">
+                              listen &amp; watch:
+                              <span class="streamingUnit">
+                                  <div class="streamFromText">YOUTUBE<span class="bksicon-youtube"></span></div>
+                                  <div class="streamDropdown">
+                                      <div class="youtube active" data-track="youtube-emb" streamsrc="https://www.youtube-nocookie.com/embed/?listType=playlist&amp;controls=1&amp;list=PL2gNzJCL3m_-VblQnkVT70iFYHGBKl9aa&amp;enablejsapi=1" video-id="" playlist-id="PL2gNzJCL3m_-VblQnkVT70iFYHGBKl9aa">
+                                          <div>YOUTUBE<span class="bksicon-youtube"></span></div>
+                                      </div>
+                                      <div class="spotify" data-track="spotify-emb" streamsrc="//open.spotify.com/embed/album/1uyf3l2d4XYwiEqAb7t7fX">
+                                          <div> SPOTIFY<span class="bksicon-spotify"></span></div>
+                                      </div>
+
+                                      <!-- <div class="soundcloud" data-track="soundcloud-emb"
+                                          streamsrc="//w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/771053856&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                                          <div>SOUNDCLOUD<span class="icon-soundcloud"></span></div>
+                                      </div> -->
+                                      <div class="apple" data-track="apple-music-emb" streamsrc="//embed.music.apple.com/us/album/doo-wops-hooligans-deluxe-version/576670451?app=music">
+                                          <div>APPLE MUSIC<span class="bksicon-appleinc"></span></div>
+                                      </div>
+                                      <!-- <div class="deezer" data-track="deezer-emb"
+                                          streamsrc=""
+                                          width="700" height="350">
+                                          <span>DEEZER</span>
+                                      </div> -->
+
+                                  </div>
+                                  <div class="arrow down"></div>
+                              </span>
+                          </div>
+                      </div>
+                      <div class="streamEmbeds">
+                          <div class="youtube active">
+                              <iframe id="ytplayer-23" width="560" height="315" src="https://www.youtube-nocookie.com/embed/?listType=playlist&amp;controls=1&amp;list=PL2gNzJCL3m_-VblQnkVT70iFYHGBKl9aa&amp;enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" data-ot-processed="yes"></iframe>
+                          </div>
+                          <div class="spotify">
+                              <iframe width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" style="pointer-events: auto;" class="optanon-category-C0003" data-src="" data-ot-processed="yes"></iframe>
+                          </div>
+
+                          <!-- <div class="soundcloud">
+                              <iframe width="100%" height="300" scrolling="no" frameborder="no" src=""
+                                  style="pointer-events: auto;"></iframe>
+                          </div> -->
+                          <div class="apple">
+                              <iframe allow="autoplay *; encrypted-media *;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="100%" height="500" frameborder="0" style="pointer-events: auto;" class="optanon-category-C0003" data-src="" data-ot-processed="yes"></iframe>
+                          </div>
+                          <!-- <div class="deezer">
+                              <iframe scrolling="no" frameborder="0" allowtransparency="true" src="" width="700"
+                                  height="240" style="pointer-events: auto;"></iframe>
+                          </div> -->
+                      </div>
+                  </div>
+                  <div class="roadBg2"><img src="/sites/g/files/g2000006216/f/202009/road.png" class="newimg"></div>
+              </div>
+      </div>
+      <div class="presaveWrap">
+          <div class="presaveImg">
+              <img src="/sites/g/files/g2000006216/f/202009/Bruno%20Mars%20-%20Doo-Wops%20-%20Artwork.jpg" class="albumImg"></div>
+          <div class="presaveTitle">add doo-wops &amp; hooligans to you library + follow bruno mars</div>
+          <div class="presaveBtns">
+              <div class="spotifyBtn">
+                  <a class="wmg-button spotifyButton" data-platform="spotify" data-track="spotify-follow">
+                      <img class="spotify-icon" src="/sites/g/files/g2000006216/f/202009/spotify_icon.svg?vjk">add</a>
+              </div>
+              <div class="appleBtn">
+                  <a class="wmg-button appleButton" data-platform="apple" data-track="apple-music-follow">
+                      <img class="apple-icon" src="/sites/g/files/g2000006216/f/202009/apple_icon.svg?vjk">add</a>
+              </div>
+          </div>
+      </div>
+      <div class="roadBg3"><img src="/sites/g/files/g2000006216/f/202009/road.png" class="newimg"></div>
+  </div>
+  <!--div class="livefyreWrap">
+      <div class="livefyreTitle">Post your anniversary message to bruno on twitter & instagram with #doowops10</div>
+      <div id="splashwall"></div>
+  </div-->
+<div class="block-flockler-wall"> <div class="livefyreTitle">Post your anniversary message to bruno on twitter &amp; instagram with #doowops10</div>
+  <div id="flockler-embed-174ea6b13930802d6b229a056cd54813"></div> 
+<script src="https://plugins.flockler.com/embed/174e51300170c30ff4f4877cfc8522b8/174ea6b13930802d6b229a056cd54813?style=popup" async=""></script></div>	
+  <div class="merchWrapper">
+      <div class="merchTitle">Exclusive Merch</div>
+      <div class="merchImg">
+          <a href="https://smarturl.it/brunomarsstore?intcmp=201004/bmars/atl/spl/s_cat/img/bdy/ww/dwh-anniv-exclusive-merch" class="merchImageclick" custom-link-name="Merch Image" target="_blank"><img src="/sites/g/files/g2000006216/f/202010/crew.png" class="merchImage"></a>
+      </div>
+      <div class="merchBtn">
+          <a href="https://smarturl.it/brunomarsstore?intcmp=201004/bmars/atl/spl/s_cat/but/bdy/ww/dwh-anniv-exclusive-merch" custom-link-name="Shop Now Button" class="shopBtn" target="_blank">SHOP NOW</a>
+      </div>
+  </div>
+  <!--<div class="followWrap">
+      <div class="followTitle">Follow to win</div>
+      <div class="followImg">
+          <img src="/sites/g/files/g2000006216/f/202009/followImg.jpg" class="followImage" />
+      </div>
+      <div class="enterBtn">
+          <a href="" class="enterButton" target="_blank">Enter Now</a>
+      </div>
+  </div> -->
+  <div class="FooterWrap">
+      <div class="splashmlistWrap">
+          <div class="mlist-outer-wrapper embedded-inline-list country-detect footer">
+              <div class="mlist-wrapper">
+                  <!-- Ajax Loader Icon -->
+                  <div id="ajaxLoader" style="display: none">
+
+                  </div><!-- //ajaxLoader-->
+
+                  <form nls_fa_name="" class="join-button-form" id="signupFormsplash" method="get" action="" autocomplete="off">
+                      <fieldset><div class="mlist-header">
+                              sign-up and follow<span class="mlist-header2">subscribe up for exclusive content, news, and more</span>
+                          </div>
+                          <div id="serverError" style="display: none">
+                              Unable to process your request at this time. Please try again later.
+                          </div>
+                          <div id="errorMsg" style="display: none">
+                              Please fill out the correct information.
+                          </div>
+                          <div class="mlist-field email">
+                              <input id="email" name="email" type="email" tabindex="-1" class="m-required m-email" placeholder="Email"></div>
+                          <div class="mlist-submit">
+                              <a><input class="submit" type="submit" value="Submit"></a>
+                          </div>
+                          <div class="primary-list-values">
+                              <input id="autoreply" name="autoreply" type="hidden" value="yes"><input id="Datasource" name="Datasource" type="hidden" value="BrunoMars_DooWops10thAnniversary_Splash_Website"><input id="mainListId" name="newsletterId" type="hidden" value="6956408"></div>
+                          <div class="termsWrapper first">
+                              <div class="terms">
+                                  <a href="javascript:void(0)" class="terms"></a>
+                              </div>
+                              <div class="termsContent">
+                                  <div class="gdpr">
+By submitting my information, I agree to receive personalized updates and marketing messages about Bruno Mars based on my information, interests, activities, website visits and device data and in accordance with the <a target="_blank" href="//www.atlanticrecords.com/privacy-policy/">Privacy Policy</a>. I understand that I can opt-out at any time by emailing <a href="mailto:privacypolicy@wmg.com">privacypolicy@wmg.com.</a>
+</div>
+                              </div>
+                          </div>
+                      </fieldset></form>
+                  <div id="thankyouBlock" style="display: none">
+                      <div class="thankyou-message embed" style="font-weight:bold;">
+                          Thank you!
+                      </div>
+                      <div class="data-source-value">
+                          <input id="Datasource" name="Datasource" type="hidden" value="BrunoMars_DooWops10thAnniversary_Splash_Website"></div>
+                      <form nls_fa_name="" id="secondForm" method="get" action="" novalidate="novalidate">
+                          <div id="thankyoublock-innerwrapper">
+                              <div class="secondFormCloseWrap">
+                                  <a href="javascript:void(0)">x</a>
+                              </div>
+                              <div class="thankyou-message embed">
+                                  Welcome <span class="emailAddress"></span> to <span>Bruno Mars'</span> mailing list!
+                              </div>
+                              <div class="thankswelcome-msg">
+                                  CUSTOMIZE YOUR NOTIFICATIONS FOR TOUR DATES NEAR YOUR HOMETOWN, BIRTHDAY WISHES, OR SPECIAL DISCOUNTS IN OUR ONLINE STORE!
+                              </div>
+                              <div id="secondary-list-values" class="secondary-list-values">
+                                  <div id="errorLabelContainer2" style="display: none">
+                                      Please fill out the correct information.
+                                  </div>
+                                  <div class="mlist-field postalcode">
+                                      <label for="postalcode">Postal Code</label>
+                                      <input id="postalcode" name="postalcode" type="text" autofocus=""></div>
+                                  <div class="mlist-field country">
+                                      <label for="country"> Country </label>
+                                      <select id="country" name="country" class="m-required"><option value="">Select a country</option><option value="United States">United States</option><option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="American Samoa">American Samoa</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Anguilla">Anguilla</option><option value="Antarctica">Antarctica</option><option value="Antigua and Barbuda">Antigua and Barbuda</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bermuda">Bermuda</option><option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option><option value="Bosnia &amp; Herzegovina">Bosnia &amp; Herzegovina</option><option value="Botswana">Botswana</option><option value="Bouvet Island">Bouvet Island</option><option value="Brazil">Brazil</option><option value="British Ind Ocean Ter ">British Ind Ocean Ter </option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Canada">Canada</option><option value="Cape Verde">Cape Verde</option><option value="Cayman Islands">Cayman Islands</option><option value="Central African Rep">Central African Rep</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="Christmas Island">Christmas Island</option><option value="Cocos (Keeling Is)">Cocos (Keeling Is)</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Cook Islands">Cook Islands</option><option value="Costa Rica">Costa Rica</option><option value="Cote D'ivoire">Cote D'Ivoire </option><option value="Croatia (Hrvatska)">Croatia (Hrvatska)</option><option value="Cuba">Cuba</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option><option value="East Timor">East Timor</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Ethiopia">Ethiopia</option><option value="Falkland Islands ">Falkland Islands </option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France, Metro">France, Metro</option><option value="French Guiana">French Guiana</option><option value="French Polynesia">French Polynesia</option><option value="French Southern Ter">French Southern Ter</option><option value="Gabon">Gabon</option><option value="Gambia">Gambia</option><option value="Georgia">Georgia</option><option value="Georgia and S. Sand Is">Georgia and S. Sand Is</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Greece">Greece</option><option value="Greenland">Greenland</option><option value="Grenada">Grenada</option><option value="Guadeloupe">Guadeloupe</option><option value="Guam">Guam</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Heard &amp; McDonald Is">Heard &amp; McDonald Is</option><option value="Honduras">Honduras</option><option value="Hong Kong">Hong Kong</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option><option value="Korea (North) ">Korea (North) </option><option value="Korea (South)">Korea (South)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan ">Kyrgyzstan </option><option value="Laos">Laos</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macau">Macau</option><option value="Macedonia">Macedonia</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Marshall Islands">Marshall Islands</option><option value="Martinique">Martinique</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mayotte">Mayotte</option><option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montserrat">Montserrat</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="Netherlands Antilles">Netherlands Antilles</option><option value="Neutral Zone Saudi/Iraq">Neutral Zone Saudi/Iraq</option><option value="New Caledonia">New Caledonia</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Niue">Niue</option><option value="Norfolk Island">Norfolk Island</option><option value="Northern Mariana Is">Northern Mariana Is</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Pitcairn">Pitcairn</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Puerto Rico">Puerto Rico</option><option value="Qatar">Qatar</option><option value="Reunion">Reunion</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Saint Lucia">Saint Lucia</option><option value="St. Vincent/Grenadines ">St. Vincent/Grenadines </option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovakia (Slovak Rep)">Slovakia (Slovak Rep)</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="Soviet Union (former)">Soviet Union (former)</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="St. Helena">St. Helena</option><option value="St. Pierre and Miquelo ">St. Pierre and Miquelo </option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Svalbard &amp; Jan Mayen">Svalbard &amp; Jan Mayen</option><option value="Swaziland">Swaziland</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syria">Syria</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Togo">Togo</option><option value="Tokelau">Tokelau</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Turks and Caicos Is">Turks and Caicos Is</option><option value="Tuvalu">Tuvalu</option><option value="US Minor Outlying Is">US Minor Outlying Is</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom </option><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Vatican City State ">Vatican City State </option><option value="Venezuela">Venezuela</option><option value="Viet Nam">Viet Nam</option><option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option><option value="Virgin Islands (US)">Virgin Islands (US)</option><option value="Wallis and Futuna Is">Wallis and Futuna Is</option><option value="Western Sahara">Western Sahara</option><option value="Yemen">Yemen</option><option value="Yugoslavia">Yugoslavia</option><option value="Zaire">Zaire</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option></select></div>
+                                  <div class="mlist-field mlist-field1">
+                                      <label for="firstname">First Name</label>
+                                      <input id="firstname" name="firstname" type="text"></div>
+                                  <div class="mlist-field">
+                                      <label for="birthday">Birth Date</label>
+                                      <select name="dobMonth" id="dobMonth"><option value="">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select><select name="dobDay" id="dobDay"><option value="">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><!--<select name="dobYear" id="dobYear" class="m-required">
+                              <option value="">Year</option>undefined<option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option>
+                              </select>--></div>
+                                  <!--input type="hidden" value="no" name="autoreply" id="labelListAutoReply"-->
+                                  <input id="mainListId" name="newsletterId" type="hidden" value="14075551"><div class="mlist-checks">
+                                      <input type="checkbox" class="global-list-checkbox" name="newsletterId" value="50"><label class="global-list" for="global-list">SIGN ME UP TO DISCOVER MORE ARTISTS LIKE <span>BRUNO MARS</span> AND OTHER OFFERS.
+</label>
+                                  </div>
+                              </div>
+                              <div class="mlist-submit-new">
+                                  <a><input class="submit" type="submit" value="Submit"></a>
+                              </div>
+                              <div class="termsWrapper second">
+                                  <div class="terms">
+                                      <a href="javascript:void(0)" class="terms"></a>
+                                  </div>
+                                  <div class="termsContent">
+                                      <div class="gdpr">By submitting my information, I agree to receive personalized updates and marketing messages about Bruno Mars based on my information, interests, activities, website visits and device data and in accordance with the <a target="_blank" href="//www.atlanticrecords.com/privacy-policy/">Privacy Policy</a>.  In addition, if I have checked the box above, I agree to receive such updates and messages about similar artists, products and offers. I understand that I can opt-out from messages at any time by emailing <a href="mailto:privacypolicy@wmg.com">privacypolicy@wmg.com.</a>
+</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                  </div><!-- //Thank you block -->
+                  <!--terms -->
+              </div>
+          </div>
+      </div>
+      <div class="popupWrapper" style="display: none;">
+          <div class="popupInner">
+              This operation is not possible because you have declined to accept Functional cookies on this site. To enable, please adjust your <a class="ot-sdk-show-settings" style="cursor:pointer">cookie settings</a> to accept Functional cookies.
+              <a class="popupClose" href="javascript:void(0);">X</a>
+          </div>
+      </div>
+
+      <div class="enterSite">
+          <a data-track="enter-site" href="/?frontpage=true&amp;intcmp=201004/bmars/atl/spl/hp/txt/bdy/ww/dwh-anniv-enter-site" class="enterSiteBtn">Enter site</a>
+      </div>
+      <div class="SocialWrap">
+          <div class="socials">
+              <ul class="footer-social"><li class="fs-fb">
+                      <a data-track="facebook-ftr" class="fs-fb-link" href="https://www.facebook.com/brunomars" target="_blank">Facebook</a>
+                  </li>
+                  <li class="fs-tw">
+                      <a data-track="twitter-ftr" class="fs-tw-link" href="https://twitter.com/BRUNOMARS" target="_blank">Twitter</a>
+                  </li>
+                  <li class="fs-ig">
+                      <a data-track="instagram-ftr" class="fs-ig-link" href="https://www.instagram.com/brunomars/" target="_blank">Instagram</a>
+                  </li>
+                  <li class="fs-yt">
+                      <a data-track="youtube-ftr" class="fs-yt-link" href="https://www.youtube.com/brunomars" target="_blank">You Tube</a>
+                  </li>
+
+                  <li class="fs-sp">
+                      <a data-track="spotify-ftr" class="fs-sp-link" href="https://play.spotify.com/artist/0du5cEVh5yTK9QJze8zA0C" target="_blank">Spotify</a>
+                  </li>
+                  <li class="fs-ap">
+                      <a data-track="apple-music-ftr" class="fs-ap-link" href="https://music.apple.com/us/artist/bruno-mars/278873078" target="_blank">Apple</a>
+                  </li>
+                  <li class="spotify-button">
+                      <iframe data-track="spotify-follow" width="100" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true" data-src="https://embed.spotify.com/follow/1/?uri=spotify:artist:0du5cEVh5yTK9QJze8zA0C&amp;size=basic&amp;theme=light&amp;show-count=0" class="optanon-category-C0003" data-ot-processed="yes"></iframe>
+                  </li>
+              </ul></div>
+      </div>
+      <div class="footer-wrapper">
+           © <span> Copyright 2021 Atlantic records</span> <span class="mob">|</span> <br class="mob"><a target="_blank" href="/privacy-policy">Privacy Policy</a> | 
+          <a target="_blank" href="/terms-of-service">Terms of Use</a>  <span class="mob">|</span> 
+          <a target="_blank" href="/privacy-policy#adchoices">Ad choices</a> <span class="mobl">|</span> 
+          <a target="_blank" href="https://whymusicmatters.com/">Whymusicmatter.com</a> <span class="mob">|</span> 
+          <a target="_blank" href="https://www.wminewmedia.com/cookies-policy/">Cookie Policy</a> |  
+          <!-- OneTrust Cookies Settings button start --><a class="ot-sdk-show-settings" style="cursor:pointer"> Cookie Settings</a><!-- OneTrust Cookies Settings button end --> 
+      </div>
+
+  </div>
+</div></body></html>
+</div></div></div><div class="field field-name-field-display-rate field-type-list-text field-label-above"><div class="field-label">Display rate:&nbsp;</div><div class="field-items"><div class="field-item even">Always</div></div></div><div class="field field-name-field-lightbox field-type-list-text field-label-above"><div class="field-label">Display as splash page or lightbox?:&nbsp;</div><div class="field-items"><div class="field-item even">Splash page</div></div></div><div class="field field-name-field-lbox-width field-type-text field-label-above"><div class="field-label">Lightbox Width:&nbsp;</div><div class="field-items"><div class="field-item even">600</div></div></div><div class="field field-name-field-lbox-height field-type-text field-label-above"><div class="field-label">Lightbox Height:&nbsp;</div><div class="field-items"><div class="field-item even">400</div></div></div><div class="field field-name-field-query-param field-type-text field-label-above"><div class="field-label">Query Param:&nbsp;</div><div class="field-items"><div class="field-item even">frontpage</div></div></div>    </div>
+  
+      
+      
+</div>
+
+
+
+</div>
+    </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+                                                </div>
+                                            </div>
+                    
+                  </div> <!-- /.box tb-terminal -->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div> <!-- /#main -->
+
+         <!-- /*postcontent -->
+
+      </div>
+    </div> <!-- /#content -->
+      
+          
+  </div> <!-- /.lining -->
+</div> <!-- /.page-width -->
+</div> <!-- /#page -->
+  
+
+<div id="copyright" class="stack-copyright stack page clearfix tb-region tb-scope">
+  <div class="page-width inner">
+    <div class="stack-width">
+      <div class="box">
+          <div class="region region-copyright">
+  
+<div id="block-block-621" class="block block-block clearfix">
+<div class="inner tb-terminal">
+  <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+
+  <div class="middle tb-terminal">
+      
+          
+          
+            
+    <div class="content">
+      <style>
+<!--/*--><![CDATA[/* ><!--*/
+
+#copyright {
+  display: none;
+}
+
+@media only screen and (max-width: 767px){
+  #lightBoxContent.lightBoxContent.tklb .lightBoxClose.turnKeyClose a {
+      box-sizing: border-box;
+      padding: 10px 20px;
+      height: auto;
+  }
+}
+
+
+/*--><!]]>*/
+</style><script>
+<!--//--><![CDATA[// ><!--
+
+jQuery(document).ready(function(){ 
+  function Item(upc, units) {
+      this.upc = upc;
+      this.units = units;
+  }
+   
+  function parseItemCookies(cookies) {
+      var myCookies = cookies.split('&');
+      console.log(myCookies);
+      var products = new Array();
+      var upc;
+      var units;
+      for (var i = 0; i < myCookies.length; i++) {
+                      var chunk = myCookies[i].split('=');
+                      console.log(chunk);
+                      if (chunk[0].substring(0, 3).toLowerCase() == "upc") {
+                                      upc = jQuery.trim(chunk[1]);
+                                      console.log("upc: " + upc);
+                                      continue;
+                      }
+                      if (chunk[0].substring(0, 5).toLowerCase() == "units") {
+                                      units = jQuery.trim(chunk[1]);
+                                      console.log("units: " + units);
+                      }
+                      var item = new Item(upc, units);
+                      products.push(item);
+      }
+      return products;
+  }
+   
+  function getCookie(c_name)
+  {
+      var i,x,y,ARRcookies=document.cookie.split(";");
+   
+      for (i=0;i<ARRcookies.length;i++)
+      {
+          x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+          y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+          x=x.replace(/^\s+|\s+$/g,"");
+          if (x==c_name)
+          {
+              return unescape(y);
+          }
+       }
+  }
+   
+  var allCookies = getCookie("items");
+  var csvUPC = "";
+  var csvUnits ="";
+  var totalUnits=0;
+  if (typeof(allCookies) !== "undefined") {
+      var items = parseItemCookies(allCookies);
+      for(var i=0; i < items.length; i++) {
+          csvUPC += items[i].upc + " ";
+          csvUnits += items[i].units+ " ";
+      var temp = parseInt(items[i].units);
+      totalUnits  = totalUnits + temp;
+          console.log("upc: " + items[i].upc);
+          console.log("units: " + items[i].units);
+      }                             
+      csvUPC = csvUPC.slice(0, -2);
+      csvUnits = csvUnits.slice(0, -2);
+      console.log("CSVUPC: " + csvUPC);
+      console.log("CSVUnits: " + csvUnits);
+  }
+
+  var upc_wild_card =csvUPC;
+  jQuery('#edit-field-upc-value').attr('value',upc_wild_card);
+  if(upc_wild_card!==""){
+      jQuery('#edit-submit-cart').click();
+  }
+  jQuery('#cart a').html(totalUnits);
+  setTimeout(function(){ jQuery('#views-exposed-form-cart-block .views-exposed-form').hide();
+      var totalPrice=0;
+      jQuery('#block-views-cart-block .item-list ul li').each(function(){
+          var j= jQuery(this).find('.views-field.views-field-field-upc .field-content').text();
+          for(var i=0; i < items.length; i++) {
+              if( items[i].upc == j){
+                  jQuery(this).find('.item-qty .value').html(items[i].units);
+              }
+          }
+          totalPrice= totalPrice + (jQuery(this).find('.item-qty .value').text()* jQuery(this).find('.views-field-field-price span').text());
+          jQuery('#cart-total .total-value').html(totalPrice); 
+      });
+      jQuery('.views-field-field-price a').removeAttr('target');
+
+  },5000);
+
+});
+
+//--><!]]>
+</script>      </div>
+    
+  </div>
+  
+  <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+</div>
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="https://www.brunomars.com/sites/g/files/g2000006216/f/js/js_7Ukqb3ierdBEL0eowfOKzTkNu-Le97OPm-UqTS5NENU.js"></script>
+<script type="text/javascript" src="https://www.brunomars.com/sites/g/files/g2000006216/f/js/js_VCJVaBOitrSL_ivJxM5ol8Ajl-AG_lA5Mu9VkbF6mZQ.js"></script>
+<script type="text/javascript" src="https://libraries.wmgartistservices.com/custom-js/Mailing-List-V3.js"></script>
+<script type="text/plain" src="https://libraries.wmgartistservices.com/custom-js/Twitter-Button-Script.js" class="optanon-category-C0003"></script>
+<script type="text/javascript" src="https://libraries.wmgartistservices.com/custom-js/Silverpop-Integration.js"></script>
+<script type="text/javascript" src="https://www.brunomars.com/sites/g/files/g2000006216/f/js/js_MJaB122g2Y7A-YS9AAlnjA8DrvxsekA0H_1LIziyOAc.js"></script>
+<script type="text/plain" src="https://apis.google.com/js/platform.js" class="optanon-category-C0003"></script>
+<script type="text/javascript" src="https://www.brunomars.com/sites/g/files/g2000006216/f/js/js_379i-zzp-5PnkawtDAnapmT7_SiusEf_UlH4ywa4jh4.js"></script>
+<script type="text/javascript" src="https://d2ccommon.wmg-gardens.com/sites/g/files/g2000007471/f/assets/DTM_Custom.js.txt"></script>
+
+<!--[if IE ]>
+</div>
+<![endif]-->
+
+<!--[if IE 8]>
+</div>
+<![endif]-->
+
+<!--[if IE 7]>
+</div>
+<![endif]-->
+
+<!--[if lt IE 7]>
+</div>
+<![endif]-->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"NRJS-1888dd77a01fc8c6df6","applicationID":"277409019","transactionName":"YwYDMBdXD0dYVUNYXlpMIAcRXw5aFlhYVVRrEwADAGkXXVxB","queueTime":0,"applicationTime":393,"atts":"T0EARl9NHEk=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>
